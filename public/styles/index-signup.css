@@ -1,0 +1,35 @@
+body {
+  background-color: black;
+  background-image: url('/images/background.jpg');
+  color: white;
+  background-repeat: no-repeat;
+  background-size: 100% 100vh;
+  /* background-position: left; */
+}
+
+.intro-text {
+  font-size: 2vw;
+}
+
+.logo-index {
+  width: 40vw;
+}
+
+
+/* ------------------- SIGNUP.HANDLEBARS ------------------- */
+.signup-link {
+  font-size: 0.7rem;
+}
+
+.input-signup {
+  width: 40vw;
+  margin-bottom: 1rem;
+}
+
+.form-signup {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  text-align: center
+}

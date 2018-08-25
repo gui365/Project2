@@ -1,3 +1,59 @@
-.list-group-item {
-  line-height: 2.5;
+html, body {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+/* 
+.margin-top {
+  margin-top: 3rem;
+} */
+
+.red-font {
+  color: red;
+}
+
+.display-none {
+  display: none;
+}
+
+.display-block {
+  display: block;
+}
+
+h1 {
+  margin: 0 2rem;
+  font-weight: 900;
+}
+
+h2 {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+header {
+  height: 3rem;
+}
+
+header a {
+  margin: 0 1rem;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+header a:hover {
+  border-bottom: 1px solid red;
+  text-decoration: none;
+  color: red;
+  margin-bottom: -1px;
+}
+
+
+header .mock-a:hover {
+  color: black;
+  border-bottom: 0px solid;
+  margin-bottom: 0;
+}
+
+header .mock-a {
+  font-weight: 700;
 }

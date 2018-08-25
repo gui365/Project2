@@ -1,0 +1,26 @@
+.modal-dialog div {
+  color: black;
+  border-radius: 0;
+}
+
+.modal-dialog label {
+  font-weight: 700;
+}
+
+.modal-dialog input {
+  border: none;
+}
+
+.modal-dialog {
+  text-align: center;
+}
+
+.modal-content {
+  background-image: url("/images/bark3.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.modal-footer {
+  border: none;
+}
