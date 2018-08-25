@@ -2,33 +2,37 @@
 </head>
 
 <body>
-  <div class="container">
-    <section class="d-flex flex-wrap flex-column players">
+  <div class="container d-flex flex-wrap align-items-center justify-content-center align-self-center">
+    <section class="d-flex flex-wrap flex-column player-info flex">
       <div class="player-div d-flex align-items-center">
         <img class="player-img" src="/images/player02.png" alt="Player 3">
-        <p class="player-name">{USERNAME}</p>
+        <h1 class="player-name">{USERNAME}</h1>
       </div>
     </section>
 
-    <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-          <div class="modal-body">
-            <form>
-              <div class="form-group">
-                <label for="message-text" class="col-form-label">Session Code</label>
-                <input type="text" class="form-control" id="session-code">
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-            <button type="button" class="btn btn-danger">Join</button>
-          </div>
-        </div>
+    <section class="d-flex flex-wrap player-options align-items-center justify-content-center">
+      <div class="option d-flex align-items-center justify-content-center" data-option="A">A</div>
+      <div class="option d-flex align-items-center justify-content-center" data-option="B">B</div>
+      <div class="option d-flex align-items-center justify-content-center" data-option="C">C</div>
+      <div class="option d-flex align-items-center justify-content-center" data-option="D">D</div>
+    </section>
+
+    <section class="d-flex player-powerups align-items-center justify-content-between">
+      <div class="powerup-div d-flex align-items-center justify-content-center flex-wrap flex-column" data-option="pu-elbow">
+        <img class="powerup-img" src="/images/pu-bet.png" alt="Bet Power Up">
+        <p>BET</p>
       </div>
-    </div>
-    
+      
+      <div class="powerup-div d-flex align-items-center justify-content-center flex-wrap flex-column not-active" data-option="pu-elbow">
+        <img class="powerup-img" src="/images/pu-steak.png" alt="Steak Power Up">
+        <p>STEAK</p>
+      </div>
+      
+      <div class="powerup-div d-flex align-items-center justify-content-center flex-wrap flex-column not-active" data-option="pu-elbow">
+        <img class="powerup-img" src="/images/pu-punch.png" alt="Punch Power Up">
+        <p>PUNCH</p>
+      </div>
+    </section>
   </div>
 
 
