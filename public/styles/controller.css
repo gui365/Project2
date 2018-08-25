@@ -1,10 +1,36 @@
+@font-face {
+  font-family: 'YouMurderer';
+  src: url("/styles/fonts/youmurdererbb_reg.ttf");
+}
+
+html {
+  height: 100%;
+}
+
 body {
-  background: url("/images/back_controller.png") no-repeat;
+  background: url("/images/bark.jpg") no-repeat;
   background-size: 100vw 100vh;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 6vw;
+  margin: 0;
 }
 
 p {
   margin: 0;
+}
+
+.container {
+  height: 100vh;
 }
 
 .player-img {
@@ -14,9 +40,54 @@ p {
 
 section {
   margin: 0;
-  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 5px;
+  margin: 0.5rem;
+  box-shadow: 8px 8px 40px black inset;
+  /* border: 2px solid rgb(63, 63, 63); */
+  width: 100vw;
+}
+
+.player-info {
+  background-color: #a5a5a566;
+  /* background-image: url("/images/back_controller_section.jpg"); */
+  background-size: 100% auto
+}
+
+.player-powerups {
+  height: 30vh;
+}
+
+.player-options {
+  height: 45vh;
+}
+
+.option {
+  width: 30%;
+  height: 30%;
   margin: 1rem;
-  box-shadow: 5px 5px 20px black inset;
-  border: 2px solid rgb(63, 63, 63);
+  padding: 1rem;
+  text-align: center;
+  font-size: 25vw;
+  border-radius: 50%;
+  box-shadow: 8px 8px 20px black inset;
+  /* font-weight: 900; */
+  font-family: "YouMurderer", Arial, Helvetica, sans-serif;
+  color: rgba(199, 0, 0, 0.6);
+  text-shadow: 0 0 30px rgb(209, 0, 0);
+}
+
+.powerup-img {
+  width: 80%;
+  height: 80%;
+  margin: 0 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.powerup-div p {
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.not-active {
+  opacity: 0.2;
 }
