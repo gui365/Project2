@@ -1,13 +1,10 @@
 {
   "development": {
     "username": "root",
-    "password": "Pa@19144",
+    "password": "root",
     "database": "projectTwo_db",
     "host": "localhost",
-    "dialect": "mysql",
-    "dialectOptions": {
-      "socketPath": "/Applications/MAMP/tmp/mysql/mysql.sock"
-    }
+    "dialect": "mysql"
   },
   "test": {
     "username": "root",

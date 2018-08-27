@@ -7,7 +7,6 @@ $(document).ready(function() {
 
   // When the signup button is clicked, we validate the email and password are not blank
   signUpForm.on("click", function(event) {
-    console.log("this works");
     event.preventDefault();
     var userData = {
       username: usernameInput.val().trim(),
