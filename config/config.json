@@ -4,7 +4,10 @@
     "password": "root",
     "database": "projectTwo_db",
     "host": "localhost",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "dialectOptions": {
+      "socketPath": "/Applications/MAMP/tmp/mysql/mysql.sock"
+    }
   },
   "test": {
     "username": "root",
