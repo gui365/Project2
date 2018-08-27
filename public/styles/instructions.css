@@ -1,3 +1,25 @@
+/* Instructions.html */
 header a {
   color: black;
+}
+
+/* Settings.html */
+.avatar-img {
+  width: 10vw;
+}
+/* 
+.selected-avatar-img {
+  border-radius: 40%;
+  border-top: 5px solid rgb(39, 27, 148);
+  border-bottom: 5px solid rgb(39, 27, 148);
+  background-color: rgb(108, 117, 247);
+} */
+
+.avatar-img {
+  margin-right: 1rem;
+}
+
+.btn {
+  width: 20%;
+  margin: 1rem;
 }
