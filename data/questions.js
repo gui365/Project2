@@ -19,7 +19,7 @@ connection.connect(function(err) {
 });
 
 function pickEasyQuestions() {
-  connection.query("SELECT * FROM questions WHERE difficulty = 'easy' ORDER BY RAND() LIMIT 4", function(err, results){
+  connection.query("SELECT * FROM questions WHERE difficulty = 'easy' ORDER BY RAND() LIMIT 7", function(err, results){
     if (err) {
       throw err;
     }
@@ -28,7 +28,7 @@ function pickEasyQuestions() {
 }
 
 function pickMediumQuestions() {
-  connection.query("SELECT * FROM questions WHERE difficulty = 'medium' ORDER BY RAND() LIMIT 4", function(err, results){
+  connection.query("SELECT * FROM questions WHERE difficulty = 'medium' ORDER BY RAND() LIMIT 5", function(err, results){
     if (err) {
       throw err;
     }
@@ -37,7 +37,7 @@ function pickMediumQuestions() {
 }
 
 function pickHardQuestions() {
-  connection.query("SELECT * FROM questions WHERE difficulty = 'hard' ORDER BY RAND() LIMIT 2", function(err, results){
+  connection.query("SELECT * FROM questions WHERE difficulty = 'hard' ORDER BY RAND() LIMIT 1", function(err, results){
     if (err) {
       throw err;
     }
@@ -56,7 +56,8 @@ function populateQuestions(results) {
     question.incorrect3 = results[i].incorrect2;
     questions.push(question);
   }
-  if (questions.length === 10) {
+  if (questions.length === 13) {
+    console.log(questions);
     connection.end();
   }
 }
