@@ -2,14 +2,48 @@
 </head>
 
 <body>
-  <div class="container">
-  
-    <div class="d-flex align-items-center">
-      <img src="/images/predator_yogi.png" alt="Choose Your Predator Logo" style="width: 10vw; height: 10vw">
-      <h2>Yogi Bear</h2>
-    </div>
+  <div >
+
+    <section id="game-stats" class="container d-flex align-items-center justify-content-center">
+      
+      <table>
+        <tr>
+          <th>Predator</th>
+          <th>Prey</th>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="d-flex align-items-center flex-wrap flex-column">
+              <img class="player-img" src="/images/predator_yogi.png" alt="Predator Image">
+              <p>Yogi Bear</p>
+            </div>
+          </td>
+        
+          <td>
+            <div class="d-flex align-items-center justify-content-center">
+              <div class="player-div d-flex align-items-center flex-wrap flex-column">
+                <img class="player-img" src="/images/avatar01.png" alt="Player 1">
+                <p class="player-name">player1</p>
+              </div>
+
+              <div class="player-div d-flex align-items-center flex-wrap flex-column">
+                <img class="player-img" src="/images/avatar02.png" alt="Player 2">
+                <p class="player-name">player2</p>
+              </div>
+
+              <div class="player-div d-flex align-items-center flex-wrap flex-column">
+                <img class="player-img" src="/images/avatar03.png" alt="Player 3">
+                <p class="player-name">player3</p>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+    </section>
     
-    <section class="d-flex justify-content-between align-items-center board">
+    <section id="game-board" class="d-flex justify-content-between align-items-center board">
       <img class="board-piece" src="/images/board_start.png" alt="Start">
       <img class="board-piece" src="/images/board_step.png" alt="Step 1">
       <img class="board-piece" src="/images/board_step.png" alt="Step 2">
@@ -21,50 +55,6 @@
       <img class="board-piece" src="/images/board_step.png" alt="Step 8">
       <img class="board-piece" src="/images/board_step.png" alt="Step 9">
       <img class="board-piece" src="/images/board_cabin.png" alt="End">
-    </section>
-
-    <section class="d-flex flex-wrap flex-column players">
-      <table>
-        <tr>
-          <th>Player</th>
-          <th>Steps to Safety</th>
-          <th>Answered</th>
-        </tr>
-
-        <tr>
-          <td>
-            <div class="player-div">
-              <img class="player-img" src="/images/avatar01.png" alt="Player 1">
-              <p class="player-name">{USERNAME}</p>
-            </div>
-          </td>
-          <td><h3>3</h3></td>
-          <td> </td>
-        </tr>
-
-        <tr>
-          <td>
-            <div class="player-div">
-              <img class="player-img" src="/images/avatar02.png" alt="Player 2">
-              <p class="player-name">{USERNAME}</p>
-            </div>
-          </td>
-          <td><h3>4</h3></td>
-          <td> </td>
-        </tr>
-
-        <tr>
-          <td>
-            <div class="player-div">
-              <img class="player-img" src="/images/avatar03.png" alt="Player 3">
-              <p class="player-name">{USERNAME}</p>
-            </div>
-          </td>
-          <td><h3>6</h3></td>
-          <td> </td>
-        </tr>
-      </table>
-
     </section>
 
     <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
