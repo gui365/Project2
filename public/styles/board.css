@@ -8,10 +8,10 @@ header {
 }
 
 body {
-  /* background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("/images/cabin2.jpg") no-repeat; */
-  /* background-size: cover 100vh; */
+  background: url("/images/background.jpg") no-repeat;
+  background-size: 100vw 100vh;
   /* background-position: 0 -250px; */
-  background-color: rgb(102, 82, 52);
+  /* background-color: rgb(102, 82, 52); */
 }
 
 section {

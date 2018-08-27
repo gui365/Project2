@@ -33,3 +33,14 @@ body {
   align-items: center;
   text-align: center
 }
+
+.avatar-img {
+  width: 10vw;
+}
+
+.selected-avatar-img {
+  border-radius: 40%;
+  border-top: 5px solid rgb(151, 0, 0);
+  border-bottom: 5px solid rgb(151, 0, 0);
+  background-color: rgb(199, 45, 45);
+}
