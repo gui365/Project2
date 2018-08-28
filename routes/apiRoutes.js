@@ -3,11 +3,6 @@ var passport = require("../config/passport");
 
 module.exports = function (app) {
 
-  app.post("/login", passport.authenticate("local", {
-    successRedirect: "/dashboard",
-    failureRedirect: "/login"
-  }));
-
   app.post("/login",
     passport.authenticate("local"),
     function (req, res) {
@@ -32,16 +27,5 @@ module.exports = function (app) {
     req.logout();
     res.redirect("/");
   });
-
-  // app.get("/api/user_data", function (req, res) {
-  //   if (!req.user) {
-  //     res.json({});
-  //   } else {
-  //     res.json({
-  //       email: req.user.email,
-  //       id: req.user.id
-  //     });
-  //   }
-  // });
 
 };
