@@ -4,7 +4,6 @@ $(document).ready(function () {
   var passwordInput = $("#psw");
 
   loginForm.on("click", function (event) {
-    console.log("this works");
     event.preventDefault();
     var userData = {
       email: emailInput.val().trim(),
@@ -25,7 +24,8 @@ $(document).ready(function () {
       email: email,
       password: password
     }).then(function (data) {
-      window.location.replace("/dashboard");
+      console.log(data);
+      window.location.replace(data);
     }).catch(function (err) {
       console.log(err);
     });
