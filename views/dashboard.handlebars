@@ -6,7 +6,7 @@
 <body>
   <div class="container">
     <header class="d-flex align-items-center justify-content-end">
-      <a href="/api/newsession">Create session</a>
+      <a class="create-button" data-toggle="modal" data-target=".modal-create">Create session</a>
       <a class="header-option" data-toggle="modal" data-target=".bd-example-modal-sm" href="#">Join session</a>
       <a href="/settings">Settings</a>
       <a class="mock-a">Welcome, {NAME}</a>
@@ -20,7 +20,7 @@
     <section>
       <h2>Create Session</h2>
       <p>This option lets you create a new game and invite your friends using the unique session code.</p>
-      <button id="create-button" class="btn btn-danger">Create</button>
+      <button class="btn btn-danger create-button" data-toggle="modal" data-target=".modal-create">Create</button>
     </section>
 
     <section>
@@ -43,6 +43,20 @@
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
             <button type="button" class="btn btn-danger">Join</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade modal-create" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h2>Your Session Code is:</h2>
+            <h1 class="session-code"></h1>
+          </div>
+          <div class="modal-footer justify-content-center">
+            <p>Waiting for <span id="waiting-players">X</span> more players to join this session</p>
           </div>
         </div>
       </div>
