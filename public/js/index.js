@@ -2,6 +2,7 @@
 //hide these keys in .dotenv file
 //link to add to relevant files
 //<script src="https://www.gstatic.com/firebasejs/5.4.1/firebase.js"></script>
+
 // Initialize Firebase
 var config = {
   apiKey: "AIzaSyAVctAeThQ7WFsUui0Zdmf_2Mrr-8CoiNg",
@@ -67,9 +68,6 @@ $(document).ready(function(){
 //   }
 
 
-
-
-
 // //these brackets close the join-button click event
 // });
 //create code that counts the connections
@@ -86,6 +84,7 @@ $(document).ready(function(){
 //Will need to cap the amount of connections at 3
 
 //create code that captures each user's answers to questions (form)
+
 //create code that captures each user's wins/losses
 
 
