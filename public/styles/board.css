@@ -15,11 +15,8 @@ body {
 }
 
 section {
-  background-color: rgba(255, 255, 255, 0.8);
-  color: black;
-  border-radius: 10px;
   padding: 1rem;
-  margin: 2rem 0
+  margin: 0 0 2rem 0
 }
 
 p {
@@ -36,14 +33,8 @@ h2 {
 }
 
 .player-img {
-  width: 4vw;
-  height: 4vw;
-  margin: 0.3rem;
-}
-
-.player-name {
-  font-size: 0.8rem;
-  font-weight: 900;
+  width: 8vw;
+  margin-right: 1rem;
 }
 
 .player-div {
@@ -53,10 +44,21 @@ h2 {
 }
 
 table {
-  
+  /* background-color: blue; */
+  width: 100%;
 }
 
-td, th {
+th {
+  color: black;
   text-align: center;
-  width: 33%;
+  font-size: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#game-stats {
+  border-radius: 0 0 30px 30px;
+}
+
+#game-board {
+  background-color: rgba(255, 255, 255, 0.6);
 }
