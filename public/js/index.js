@@ -38,12 +38,6 @@ function generateCode() {
   return sessionCode;
 }
 
-//establish variables for player values to be added to firebase
-// var pID= "";
-// var pOneActive = 0;
-// var pTwoActive = 0;
-// var pThreeActive = 0;
-
 
 
 //when create button is clicked, a code is generated
@@ -54,34 +48,39 @@ $(document).ready(function(){
     sessionCode = generateCode();
     $(".session-code").text(sessionCode);
     database.ref("/" + sessionCode).set(game);
+
   });
+
+
+    // At the initial load and subsequent value changes, get a snapshot of the stored data.
+    // This function allows you to update your page in real-time when the firebase database changes.
+    database.ref().on("value", function(snapshot) {
+      game = snapshot.val();
+      console.log(game);
+
+      // If any errors are experienced, log them to console.
+    }, function(errorObject) {
+      console.log("The read failed: " + errorObject.code);
+    });
+
+    //click event on modal join button
+    //wrap click event in a check to make sure the array of players does not exceed 3
+    $("#joinSession-button").click(function(){
+      //capture uniquely generated session code from text box
+      var sessionEnter = $("#session-code").val();
+      //check to see if players variable exists in the current game 
+      //and that the number of players does not exceed 3
+      if ( !("players" in game[sessionEnter]) || Object.keys(game[sessionEnter].players).length < 3) {
+        //add player
+        database.ref().child(sessionEnter + "/players").push({yellow: "yellow"});
+        console.log("game is open");
+      }
+      else {
+        console.log("game is full");
+      }
+      
+    });
 });
-
-//Once three users have input the same code, the session begins
-//Create click event for the #join-button, which presumably will begin once 3 users have entered their codes
-// $("#join-button").on("click", function(event){
-//   //prevents page from refreshing
-//   event.preventDefault();
-//   var isConnected;
-//   if(nameInput === 0) {
-
-//   }
-
-
-// //these brackets close the join-button click event
-// });
-//create code that counts the connections
-//once there are 3 connections, that will trigger the change in HTML
-
-// connectionsRef references a specific location in our database.
-// All of our connections will be stored in this directory.
-// var connectionsRef = database.ref("/connections")
-// '.info/connected' is a special location provided by Firebase that is updated
-// every time the client's connection state changes.
-// '.info/connected' is a boolean value, true if the client is connected and false if they are not.
-// var connectedRef = database.ref(".info/connected");
-
-//Will need to cap the amount of connections at 3
 
 //create code that captures each user's answers to questions (form)
 
