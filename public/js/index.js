@@ -28,7 +28,7 @@ var game = {
 };
 //generates random code which creates a session and allows other users to join the session
 function generateCode() {
-  var sessionCode = "";
+  sessionCode = "";
   var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
   
   for (var i = 0; i < 6; i++) {
@@ -52,34 +52,34 @@ $(document).ready(function(){
   });
 
 
-    // At the initial load and subsequent value changes, get a snapshot of the stored data.
-    // This function allows you to update your page in real-time when the firebase database changes.
-    database.ref().on("value", function(snapshot) {
-      game = snapshot.val();
-      console.log(game);
+  // At the initial load and subsequent value changes, get a snapshot of the stored data.
+  // This function allows you to update your page in real-time when the firebase database changes.
+  database.ref().on("value", function(snapshot) {
+    game = snapshot.val();
+    console.log(game);
 
-      // If any errors are experienced, log them to console.
-    }, function(errorObject) {
-      console.log("The read failed: " + errorObject.code);
-    });
+    // If any errors are experienced, log them to console.
+  }, function(errorObject) {
+    console.log("The read failed: " + errorObject.code);
+  });
 
-    //click event on modal join button
-    //wrap click event in a check to make sure the array of players does not exceed 3
-    $("#joinSession-button").click(function(){
-      //capture uniquely generated session code from text box
-      var sessionEnter = $("#session-code").val();
-      //check to see if players variable exists in the current game 
-      //and that the number of players does not exceed 3
-      if ( !("players" in game[sessionEnter]) || Object.keys(game[sessionEnter].players).length < 3) {
-        //add player
-        database.ref().child(sessionEnter + "/players").push({yellow: "yellow"});
-        console.log("game is open");
-      }
-      else {
-        console.log("game is full");
-      }
-      
-    });
+  //click event on modal join button
+  //wrap click event in a check to make sure the array of players does not exceed 3
+  $("#joinSession-button").click(function(){
+    //capture uniquely generated session code from text box
+    var sessionEnter = $("#session-code").val();
+    //check to see if players variable exists in the current game 
+    //and that the number of players does not exceed 3
+    if ( !("players" in game[sessionEnter]) || Object.keys(game[sessionEnter].players).length < 3) {
+      //add player
+      database.ref().child(sessionEnter + "/players").push({yellow: "yellow"});
+      console.log("game is open");
+    }
+    else {
+      console.log("game is full");
+    }
+    
+  });
 });
 
 //create code that captures each user's answers to questions (form)
