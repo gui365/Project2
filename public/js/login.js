@@ -30,5 +30,8 @@ $(document).ready(function () {
       console.log(err);
     });
   }
+  if(loginFailed) {
+    $("#login-link").click();
+  }
 
 });
