@@ -9,7 +9,7 @@
       <a class="create-button" data-toggle="modal" data-target=".modal-create">Create session</a>
       <a class="header-option" data-toggle="modal" data-target=".bd-example-modal-sm" href="#">Join session</a>
       <a href="/settings">Settings</a>
-      <a class="mock-a">Welcome, {{username}}</a>
+      <a class="mock-a">Welcome, <span id="username">{{username}}</span></a>
     </header>
   
     <div class="d-flex align-items-center">
@@ -30,12 +30,12 @@
     </section>
 
     <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-sm">
+      <div class="modal-dialog modal-md">
         <div class="modal-content">
           <div class="modal-body">
             <form>
               <div class="form-group">
-                <label for="message-text" class="col-form-label">Session Code</label>
+                <label for="message-text" class="col-form-label"><h2>Session Code</h2></label>
                 <input type="text" class="form-control" id="session-code">
               </div>
             </form>

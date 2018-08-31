@@ -22,10 +22,21 @@ var database = firebase.database();
 //global variables
 var sessionCode;
 
-var game = {
+var gameStructure = {
   players: [],
-  question: 0
+  questionNumber: 0,
+  p1Choice: "",
+  p2Choice: "",
+  p3Choice: "",
+  correctAnswer: "",
+  p1Avatar: "",
+  p2Avatar: "",
+  p3Avatar: "",
+  predatorAvatar: ""
 };
+
+var currentGame;
+
 //generates random code which creates a session and allows other users to join the session
 function generateCode() {
   sessionCode = "";
@@ -47,7 +58,7 @@ $(document).ready(function(){
     event.preventDefault();
     sessionCode = generateCode();
     $(".session-code").text(sessionCode);
-    database.ref("/" + sessionCode).set(game);
+    database.ref("/" + sessionCode).set(gameStructure);
 
   });
 
@@ -55,28 +66,37 @@ $(document).ready(function(){
   // At the initial load and subsequent value changes, get a snapshot of the stored data.
   // This function allows you to update your page in real-time when the firebase database changes.
   database.ref().on("value", function(snapshot) {
-    game = snapshot.val();
-    console.log(game);
+    currentGame = snapshot.val();
+    console.log(currentGame);
 
     // If any errors are experienced, log them to console.
   }, function(errorObject) {
     console.log("The read failed: " + errorObject.code);
   });
 
+
   //click event on modal join button
   //wrap click event in a check to make sure the array of players does not exceed 3
   $("#joinSession-button").click(function(){
     //capture uniquely generated session code from text box
     var sessionEnter = $("#session-code").val();
+    
+    // grab the username from the dashboard
+    var userName = $("#username").text();
+    console.log(userName);
+    
+
     //check to see if players variable exists in the current game 
     //and that the number of players does not exceed 3
-    if ( !("players" in game[sessionEnter]) || Object.keys(game[sessionEnter].players).length < 3) {
+    if ( !("players" in currentGame[sessionEnter]) || Object.keys(currentGame[sessionEnter].players).length < 3) {
       //add player
-      database.ref().child(sessionEnter + "/players").push({yellow: "yellow"});
+      database.ref().child(sessionEnter + "/players").push(userName);
       console.log("game is open");
+      // RENDER CONTROLLER WHERE SESSION WAS JOINED
     }
     else {
       console.log("game is full");
+      // RENDER BOARD WHERE SESSION WAS CREATED
     }
     
   });
