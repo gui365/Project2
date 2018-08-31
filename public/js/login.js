@@ -24,10 +24,14 @@ $(document).ready(function () {
       email: email,
       password: password
     }).then(function (data) {
-      window.location.replace(data);
+      // This data is html page (/dashboard)
+      window.location.replace("/dashboard");
     }).catch(function (err) {
       console.log(err);
     });
+  }
+  if(loginFailed) {
+    $("#login-link").click();
   }
 
 });
