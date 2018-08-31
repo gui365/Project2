@@ -24,10 +24,12 @@ $(document).ready(function () {
       email: email,
       password: password
     }).then(function (data) {
-      window.location.replace(data);
+      window.location.replace("/dashboard");
     }).catch(function (err) {
       console.log(err);
     });
   }
-
+  // if(loginFailed) {
+  //   $("#signin-btn").click();
+  // }
 });

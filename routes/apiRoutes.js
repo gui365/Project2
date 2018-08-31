@@ -1,18 +1,23 @@
 var db = require("../models");
-var passport = require("../config/passport");
 
-module.exports = function (app) {
 
+module.exports = function (app, passport) {
   app.post("/login",
     passport.authenticate("local", {
-      failureRedirect: "/"
+      failureRedirect: "/login",
     }),
     function (req, res) {
-      res.json("/dashboard");
+      db.User.findOne({
+        where: {
+          email: req.body.email
+        }
+      }).then(function(dbPost) {
+        res.json(dbPost.username);
+      });
     });
 
+
   app.post("/signup", function (req, res) {
-    console.log(req.body);
     db.User.create({
       username: req.body.username,
       email: req.body.email,
@@ -24,11 +29,4 @@ module.exports = function (app) {
       res.json(err);
     });
   });
-
-  // For future development:
-  // app.get("/logout", function (req, res) {
-  //   req.logout();
-  //   res.redirect("/");
-  // });
-
 };
