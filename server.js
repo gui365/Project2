@@ -3,7 +3,6 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
 var expressSession = require("express-session");
-// Requiring passport as we've configured it
 var passport = require("./config/passport");
 
 var db = require("./models");
@@ -24,7 +23,6 @@ app.use(
     saveUnintialized: true
   })
 );
-
 app.use(passport.initialize());
 app.use(passport.session());
 

@@ -29,11 +29,4 @@ module.exports = function (app, passport) {
       res.json(err);
     });
   });
-
-  // For future development:
-  // app.get("/logout", function (req, res) {
-  //   req.logout();
-  //   res.redirect("/");
-  // });
-
 };
