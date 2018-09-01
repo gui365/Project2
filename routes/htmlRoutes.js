@@ -54,6 +54,20 @@ module.exports = function (app) {
     res.render("instructions");
   });
 
+  app.get("/selectPredator",
+    ensureLogin.ensureLoggedIn("/login"),
+    function (req, res) {
+      res.render("selectPredator");
+    }
+  );
+
+  app.get("/selectAvatar",
+    ensureLogin.ensureLoggedIn("/login"),
+    function (req, res) {
+      res.render("selectAvatar");
+    }
+  );
+
   // Render 404 page for any unmatched routes
   app.get("*", function (req, res) {
     res.render("404");

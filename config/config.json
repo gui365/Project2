@@ -4,10 +4,7 @@
     "password": "root",
     "database": "trivia_db",
     "host": "localhost",
-    "dialect": "mysql",
-    "dialectOptions": {
-      "socketPath": "/Applications/MAMP/tmp/mysql/mysql.sock"
-    }
+    "dialect": "mysql"
   },
   "test": {
     "username": "root",
