@@ -1,8 +1,4 @@
-//Initialize Firebase
 //hide these keys in .dotenv file
-//link to add to relevant files
-//<script src="https://www.gstatic.com/firebasejs/5.4.1/firebase.js"></script>
-
 // Initialize Firebase
 var config = {
   apiKey: "AIzaSyAVctAeThQ7WFsUui0Zdmf_2Mrr-8CoiNg",
@@ -144,8 +140,8 @@ $(document).ready(function(){
 
     }
     else {
-      console.log("game is full");
       // MODAL POPS UP SAYING SESSION IS FULL
+      $(".modal-full-button").click();
     }
   });
 
