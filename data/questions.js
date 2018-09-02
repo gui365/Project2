@@ -1,19 +1,13 @@
 var mysql = require("mysql");
 var questions = [];
 
-var connection;
-
-if (process.env.JAWSDB_URL) {
-  connection = mysql.createConnection(process.env.JAWSDB_URL);
-} else {
-  connection = mysql.createConnection({
-    host: "localhost",
-    port: 8889,
-    user: "root",
-    password: "root",
-    database: "trivia_db"
-  });
-} 
+var connection = mysql.createConnection({
+  host: "localhost",
+  port: 8889,
+  user: "root",
+  password: "root",
+  database: "trivia_db"
+});
 
 connection.connect(function(err) {
   if (err) {
@@ -69,4 +63,3 @@ function populateQuestions(results) {
 }
 
 module.exports = questions;
-module.exports = connection;
