@@ -62,12 +62,19 @@ function generateCode() {
 }
 
 function renderBoard() {
-  if (Object.keys(currentGame[sessionCode].players).length === 3 && boardScreen === true) {
-    window.location.href = "/board";
-  }
+  if (boardScreen) {
+    var p1Avatar = currentGame[sessionCode].p1Avatar;
+    var p2Avatar = currentGame[sessionCode].p2Avatar;
+    var p3Avatar = currentGame[sessionCode].p3Avatar;
 
-  return;
-}
+    if (p1Avatar !== "" && p2Avatar !== "" & p3Avatar !== "") {
+      window.location.href = "/board";
+    }
+    
+  } else {
+    return;
+  }
+};
 
 
 
@@ -92,6 +99,9 @@ $(document).ready(function(){
   database.ref().on("value", function(snapshot) {
     currentGame = snapshot.val();
     console.log(currentGame);
+
+    // Run the renderBoard function to check if all players have been logged in
+    // If so, render the board only on the "boardScreen = true" device (the one that created the session)
     renderBoard();
     // If any errors are experienced, log them to console.
   }, function(errorObject) {
@@ -119,9 +129,6 @@ $(document).ready(function(){
       playerNumber = Object.keys(currentGame[sessionEnter].players).length;
       localStorage.setItem("playerNumber", playerNumber);
            
-
-      // renderBoard();
-
       if (Object.keys(currentGame[sessionEnter].players).length === 1) {
         window.location.href = "/selectPredator";
       } else {
