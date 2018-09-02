@@ -1,3 +1,5 @@
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" media="screen" href="/styles/dashboard.css"/>
   <link rel="stylesheet" type="text/css" media="screen" href="/styles/modal.css"/>
   
@@ -18,13 +20,15 @@
     </div>
     
     <section>
-      <h2>Create Session</h2>
-      <p>This option lets you create a new game and invite your friends using the unique session code.</p>
+      <h2 style="font-weight: 900;">Step 1. From your <i class="fas fa-tv"></i> COMPUTER</h2>
+      {{!-- <h2>Create Session</h2> --}}
+      <p>This option creates a new game so you can invite your friends using the unique session code.</p>
       <button class="btn btn-danger create-button" data-toggle="modal" data-target=".modal-create">Create</button>
     </section>
 
     <section>
-      <h2>Join Session</h2>
+      <h2 style="font-weight: 900;">Step 2. From your <i class="fas fa-mobile-alt"></i> PHONE</h2>
+      {{!-- <h2>Join Session</h2> --}}
       <p>Click on this option from your phone, once you have a session code in order to join the game.</p>
       <button data-toggle="modal" data-target=".bd-example-modal-sm" href="#" id="join-button" class="btn btn-warning">Join</button>
     </section>

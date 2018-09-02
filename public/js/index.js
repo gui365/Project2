@@ -42,9 +42,10 @@ var gameStructure = {
 };
 // 
 
-// This boolean will render the controllers on the user's phone once the board rendered to the screen
-var boardRendered = false;
+// This boolean will render the game board only on the device used to create the session
 var boardScreen = false; 
+// This boolean will avoid the game board to be rendered more than once
+var boardRendered = false;
 
 
 // ----------------
@@ -62,12 +63,20 @@ function generateCode() {
 }
 
 function renderBoard() {
-  if (Object.keys(currentGame[sessionCode].players).length === 3 && boardScreen === true) {
-    window.location.href = "/board";
-  }
+  if (boardScreen && boardRendered === false) {
+    var p1Avatar = currentGame[sessionCode].p1Avatar;
+    var p2Avatar = currentGame[sessionCode].p2Avatar;
+    var p3Avatar = currentGame[sessionCode].p3Avatar;
 
-  return;
-}
+    if (p1Avatar !== "" && p2Avatar !== "" & p3Avatar !== "") {
+      window.location.href = "/board";
+      boardRendered = true;
+    }
+    
+  } else {
+    return;
+  }
+};
 
 
 
@@ -76,7 +85,7 @@ function renderBoard() {
 $(document).ready(function(){
   $(".create-button").click(function(){
     event.preventDefault();
-    // Run the function to generatea code
+    // Run the function to generate a code
     sessionCode = generateCode();
 
     // Display the code to the screen and set the game structure in Firebase for that session
@@ -91,7 +100,11 @@ $(document).ready(function(){
   // This function allows you to update your page in real-time when the firebase database changes.
   database.ref().on("value", function(snapshot) {
     currentGame = snapshot.val();
+    localStorage.setItem("currentGame", JSON.stringify(currentGame));
     console.log(currentGame);
+
+    // Run the renderBoard function to check if all players have been logged in
+    // If so, render the board only on the "boardScreen = true" device (the one that created the session)
     renderBoard();
     // If any errors are experienced, log them to console.
   }, function(errorObject) {
@@ -118,10 +131,11 @@ $(document).ready(function(){
       database.ref().child(sessionEnter + "/players").push(userName);
       playerNumber = Object.keys(currentGame[sessionEnter].players).length;
       localStorage.setItem("playerNumber", playerNumber);
-           
-
-      // renderBoard();
-
+      // Push the username to Firebase
+      database.ref().child(localStorage.getItem("sessionCode")).update({
+        ["p" + playerNumber + "Username"]: userName
+      });
+      
       if (Object.keys(currentGame[sessionEnter].players).length === 1) {
         window.location.href = "/selectPredator";
       } else {
@@ -160,11 +174,3 @@ $(document).ready(function(){
     window.location.href = "/controller";
   });
 });
-
-//create code that captures each user's answers to questions (form)
-
-//create code that captures each user's wins/losses
-
-
-
-//once the user logs out of the system, the connection to firebase will need to be closed

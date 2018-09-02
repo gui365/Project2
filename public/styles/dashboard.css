@@ -18,9 +18,14 @@ section {
   color: black;
   border-radius: 10px;
   padding: 1rem;
-  margin: 2rem 0
+  margin: 2rem 0;
+  text-align: center;
 }
 
 h2 {
   margin-top: 0;
+}
+
+.session-code {
+  font-family: "Source Code Pro", 'Times New Roman', Times, serif;
 }

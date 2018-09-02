@@ -1,64 +1,89 @@
 body {
   color: white;
-}
-
-header {
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 0 0 10px 10px;
-}
-
-body {
   background: url("/images/background.jpg") no-repeat;
   background-size: 100vw 100vh;
-  /* background-position: 0 -250px; */
-  /* background-color: rgb(102, 82, 52); */
+  height: 90vh;
 }
 
-section {
-  padding: 1rem;
-  margin: 0 0 2rem 0
+#question, #choices {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 2.5vw;
+  text-shadow: 2px 2px 5px black;
 }
 
-p {
-  margin: 0;
+#question {
+  font-weight: 700;
 }
 
-h2 {
-  margin-top: 0;
+#timer {
+  font-size: 12vw;
+  font-family: 'YouMurderer';
+  color: red;
+  right: 20px;
+  top: -50px;
 }
 
-.board-piece {
-  width: 5vw;
-  height: 5vw;
-}
-
-.player-img {
-  width: 8vw;
-  margin-right: 1rem;
-}
-
-.player-div {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
-
-table {
-  /* background-color: blue; */
+.question-div {
   width: 100%;
 }
 
-th {
-  color: black;
-  text-align: center;
+.round-div {
+  width: 20%;
+  font-weight: 900;
   font-size: 1.5rem;
-  background-color: rgba(255, 255, 255, 0.5);
+  color: red;
 }
 
-#game-stats {
-  border-radius: 0 0 30px 30px;
+h2 {
+  font-size: 2rem;
+  margin: 0;
 }
 
-#game-board {
-  background-color: rgba(255, 255, 255, 0.6);
+.modal-question-dialog {
+  min-width: 90vw;
+  margin: 10vh auto;
+}
+
+.modal-question-body {
+  text-align: justify;
+  background: url("/images/bark.jpg")
+}
+
+main {
+  height: 10vh;
+}
+
+main img {
+  width: 7vw;
+}
+
+main p {
+  font-size: 100%;
+  line-height: 1.2;
+}
+
+.players {
+  left: 8vw;
+}
+
+.player1 {
+  top: -20vh;
+}
+
+.player3 {
+  top: 20vh;
+}
+
+#countdown {
+  text-shadow: 2px 2px 20px rgb(61, 61, 61);
+  text-align: center;
+  font-size: 75vh;
+  color: red;
+  font-weight: 400;
+  font-family: "YouMurderer", Arial, Helvetica, sans-serif;
+}
+
+.modal-content {
+  background: none;
 }

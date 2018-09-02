@@ -1,86 +1,68 @@
   <link rel="stylesheet" type="text/css" media="screen" href="/styles/board.css"/>
+  <script src="/js/game.js"></script>
 </head>
 
-<body>
-  <div id="timer">Timer</div>
-  <div id="question">Question</div>
-  <div id="choices">Choices</div>
+<body class="d-flex align-items-center">
 
-  <div >
+  <main class="position-relative">
+    <div class="predator position-absolute d-flex flex-wrap flex-column text-center">
+      <img id="predator-img" src="" alt="predator image">
+      <p id="predator-name"></p>
+    </div>    
+    <div class="players position-relative">
+      <div class="player player1 position-absolute text-center">
+        <img id="p1-img" src="" alt="player 1 image">
+        <p id="p1-name"></p>
+      </div>
+      <div class="player player2 position-absolute text-center">
+        <img id="p2-img" src="" alt="player 2 image">
+        <p id="p2-name"></p>
+      </div>
+      <div class="player player3 position-absolute text-center">
+        <img id="p3-img" src="" alt="player 3 image">
+        <p id="p3-name"></p>
+      </div>
+    </div>
+  </main>
+  
+    <a style="display: none;" id="modal-question" data-toggle="modal" data-target=".question-modal"></a>
+    <a style="display: none;" id="initial-countdown" data-toggle="modal" data-target=".initial-countdown"></a>
 
-    <section id="game-stats" class="container d-flex align-items-center justify-content-center">
-      
-      <table>
-        <tr>
-          <th>Predator</th>
-          <th>Prey</th>
-        </tr>
-
-        <tr>
-          <td>
-            <div class="d-flex align-items-center flex-wrap flex-column">
-              <img class="player-img" src="/images/predator_yogi.png" alt="Predator Image">
-              <p>Yogi Bear</p>
-            </div>
-          </td>
-        
-          <td>
-            <div class="d-flex align-items-center justify-content-center">
-              <div class="player-div d-flex align-items-center flex-wrap flex-column">
-                <img class="player-img" src="/images/avatar01.png" alt="Player 1">
-                <p class="player-name">player1</p>
-              </div>
-
-              <div class="player-div d-flex align-items-center flex-wrap flex-column">
-                <img class="player-img" src="/images/avatar02.png" alt="Player 2">
-                <p class="player-name">player2</p>
-              </div>
-
-              <div class="player-div d-flex align-items-center flex-wrap flex-column">
-                <img class="player-img" src="/images/avatar03.png" alt="Player 3">
-                <p class="player-name">player3</p>
-              </div>
-            </div>
-          </td>
-        </tr>
-      </table>
-
-    </section>
-    
-    <section id="game-board" class="d-flex justify-content-between align-items-center board">
-      <img class="board-piece" src="/images/board_start.png" alt="Start">
-      <img class="board-piece" src="/images/board_step.png" alt="Step 1">
-      <img class="board-piece" src="/images/board_step.png" alt="Step 2">
-      <img class="board-piece" src="/images/board_step.png" alt="Step 3">
-      <img class="board-piece" src="/images/board_step.png" alt="Step 4">
-      <img class="board-piece" src="/images/board_step.png" alt="Step 5">
-      <img class="board-piece" src="/images/board_step.png" alt="Step 6">
-      <img class="board-piece" src="/images/board_step.png" alt="Step 7">
-      <img class="board-piece" src="/images/board_step.png" alt="Step 8">
-      <img class="board-piece" src="/images/board_step.png" alt="Step 9">
-      <img class="board-piece" src="/images/board_cabin.png" alt="End">
-    </section>
-
-    <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-sm">
+    <div class="modal fade question-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+      <div class="modal-question-dialog modal-dialog">
         <div class="modal-content">
-          <div class="modal-body">
-            <form>
-              <div class="form-group">
-                <label for="message-text" class="col-form-label">Session Code</label>
-                <input type="text" class="form-control" id="session-code">
-              </div>
-            </form>
+
+          <div class="modal-question-body modal-body d-flex d-wrap flex-column">
+            <div class="timer-div d-flex justify-content-start align-items-end position-relative">
+              <div id="timer" class="position-absolute"></div>
+            </div>
+
+            <div class="round-div d-flex align-left">
+              <p>Round <span id="question-number"></span></p>
+            </div>
+
+            <div class="question-div d-flex flex-wrap flex-column justify-content-center">
+              <div id="question"></div>
+              <div id="choices"></div>
+            </div>
+
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-            <button type="button" class="btn btn-danger">Join</button>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade initial-countdown" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="countdown-body modal-body d-flex d-wrap flex-column">
+            <h1 id="countdown">5</h1>
+            <button style="display: none;" type="button" class="close-modal" data-dismiss="modal"></button>
           </div>
         </div>
       </div>
     </div>
     
-  </div>
 
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
