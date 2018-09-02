@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'YouMurderer';
+  src: url("/styles/fonts/youmurdererbb_reg.ttf");
+}
+
 html, body {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
 }

@@ -19,10 +19,10 @@ module.exports = function (app) {
   });
 
   app.get("/board",
-    ensureLogin.ensureLoggedIn("/login"),
+    // ensureLogin.ensureLoggedIn("/login"),
     function (req, res) {
       res.render("board", {
-        username: req.user.username
+        // username: req.user.username
       });
     });
 
