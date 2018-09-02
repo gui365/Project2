@@ -4,6 +4,8 @@ var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
 var expressSession = require("express-session");
 var passport = require("./config/passport");
+var questions = require("./data/questions");
+console.log(questions);
 
 var db = require("./models");
 
