@@ -27,112 +27,123 @@ $(document).ready(function () {
 
   // Trigger question modal pop-up
   // $("#modal-question").click();
-  
+
   // Start a 5 seconds timer before displaying the first question
   // Activate the modal
   $("#initial-countdown").click();
-  var startGame = setInterval(function() {
+  var startGame = setInterval(function () {
     if (initialCountdown === 1) {
       // Stop the timer
       clearInterval(startGame);
       // Close the modal
       $(".close-modal").click();
+      reset();
     }
-    
+
     initialCountdown--;
     $("#countdown").text(initialCountdown);
-  
+
   }, 1000);
-  
-  
-  
-  
-  
-  
-  
-  
-  // var timer = 15;
-  // var answerArray = [];
-  // var intervalID;
+
+  var timer = 15;
+  var answerArray = [];
+  var intervalID;
+  var clockRunning = false;
 
 
-  // function reset(){
-  //   $(".timer").show();
-  //   run();
-  //   $("#timer").empty();
-  // }
+  function run() {
+    if (!clockRunning) {
+      intervalID = setInterval(decrement, 1500);
+      document.getElementById("question").innerHTML = questionBeingAsked;
+      answerArray.forEach(function (answer) {
+        answerButtons = $("#choices").append("<button class=choice data-correct=" + answer + ">" + answer + "</button>");
+      });
+      clockRunning = true;
+    }
+  }
 
-  // function run() {
-  //   intervalID = setInterval(decrement, 1500);
-  //   document.getElementById("question").innerHTML = questions[roundNumber].question;
-  //   answerArray.forEach(function (answer) {
-  //     answerButtons = $("#choices").append("<button class=choice data-correct=" + answer + ">" + answer + "</button>");
-  //   });
-  // }
+  function decrement() {
+    timer--;
+    var ticktock = timeConverter(timer);
+    $("#timer").html(ticktock);
+    if (timer === 0) {
+      stop();
+    }
+  }
 
-  // function decrement() {
-  //   timer--;
-  //   $("#timer").html(timer);
-  //   if (timer === 0) {
-  //     stop();
-  //   }
-  // }
+  function stop() {
+    clearInterval(intervalID);
+    clockRunning = false;
+  }
 
-  // function stop() {
-  //   clearInterval(intervalID);
-  // }
+  function timeConverter(t) {
+    var seconds = t;
+    if (t < 10) {
+      seconds = "0" + t;
+    }
+    return "00:00:" + seconds;
+  }
+
+  function reset() {
+    timer = 15;
+    document.getElementById("timer").innerHTML = "00:00:15";
+    $("#question").empty();
+    $("#choices").empty();
+    run();
+  }
 
 
 
 
-  // // -----------------------------------------------------------------------------------------
 
-  // // on chosen answer click
-  // var roundNumber = 0;
-  // //this questions variable will be an array of objects
-  // var questions = require("../../data/questions");
+  // -----------------------------------------------------------------------------------------
 
-  // var randomizeAnswerOptions = function(question) {
-  //   var A = "";
-  //   var B = "";
-  //   var C = "";
-  //   var D = "";
-  //   var indexes = [];
-  //   var answerArrayUnordered = [];
-  //   answerArrayUnordered.push(question.correctAnswer);
-  //   answerArrayUnordered.push(question.incorrect1);
-  //   answerArrayUnordered.push(question.incorrect2);
-  //   answerArrayUnordered.push(question.incorrect3);
-  
-  //   while (indexes.length < 4) {
-  //     var randomizedAnswer = Math.floor(Math.random() * answerArray.length);
-  //     // console.log(indexes.length);
-  //     if (indexes.indexOf(randomizedAnswer) === -1) {
-  //       indexes.push(randomizedAnswer);
-  //     } 
-  //   }
-  //   A = answerArrayUnordered[indexes[0]];
-  //   B = answerArrayUnordered[indexes[1]];
-  //   C = answerArrayUnordered[indexes[2]];
-  //   D = answerArrayUnordered[indexes[3]];
-  //   answerArray.push(A, B, C, D);
-  // };
+  // on chosen answer click
+  var roundNumber = 0;
+  //this questions variable will be an array of objects
+  var questions = require("../../data/questions");
 
-  // for (roundNumber = 0; roundNumber < 14; roundNumber++) {
-  //   var question = questions[roundNumber];
-  //   randomizeAnswerOptions(question);
+  var randomizeAnswerOptions = function (question) {
+    var A = "";
+    var B = "";
+    var C = "";
+    var D = "";
+    var indexes = [];
+    var answerArrayUnordered = [];
+    answerArrayUnordered.push(question.correctAnswer);
+    answerArrayUnordered.push(question.incorrect1);
+    answerArrayUnordered.push(question.incorrect2);
+    answerArrayUnordered.push(question.incorrect3);
 
-  //   $(".answer").on("click", function () {
-  //     //this just returns the letter that was clicked on, A, B, C, D
-  //     var chosenAnswer = $(this).attr("data-correct");
-  //     var correctAnswer = questions[roundNumber].correctAnswer;
-  //     if (chosenAnswer === correctAnswer) {
-  //       //do stuff
-  //     } else {
-  //       //do other stuff
-  //     }
-  //   });
-  // }
+    while (indexes.length < 4) {
+      var randomizedAnswer = Math.floor(Math.random() * answerArray.length);
+      // console.log(indexes.length);
+      if (indexes.indexOf(randomizedAnswer) === -1) {
+        indexes.push(randomizedAnswer);
+      }
+    }
+    A = answerArrayUnordered[indexes[0]];
+    B = answerArrayUnordered[indexes[1]];
+    C = answerArrayUnordered[indexes[2]];
+    D = answerArrayUnordered[indexes[3]];
+    answerArray.push(A, B, C, D);
+  };
+
+  for (roundNumber = 0; roundNumber < 14; roundNumber++) {
+    var question = questions[roundNumber];
+    randomizeAnswerOptions(question);
+
+    $(".answer").on("click", function () {
+      //this just returns the letter that was clicked on, A, B, C, D
+      var chosenAnswer = $(this).attr("data-correct");
+      var correctAnswer = questions[roundNumber].correctAnswer;
+      if (chosenAnswer === correctAnswer) {
+        //do stuff
+      } else {
+        //do other stuff
+      }
+    });
+  }
 
 
 });
