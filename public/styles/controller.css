@@ -48,12 +48,16 @@ section {
   background-size: 100% auto
 }
 
-.player-powerups {
+/* .player-powerups {
   height: 30vh;
-}
+} */
+
+/* .player-options {
+  height: 45vh;
+} */
 
 .player-options {
-  height: 45vh;
+  height: 60vh;
 }
 
 .option {
