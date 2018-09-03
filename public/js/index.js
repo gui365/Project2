@@ -161,6 +161,7 @@ $(document).ready(function(){
   // Event listener on the avatar buttons to select character
   $(".avatar-option").click(function() {
     var avatarImg = $(this).attr("data-avatar");
+    localStorage.setItem("playerAvatar", avatarImg)
     var player = "p" + localStorage.getItem("playerNumber") + "Avatar"
     
     database.ref().child(localStorage.getItem("sessionCode")).update({
@@ -169,4 +170,8 @@ $(document).ready(function(){
 
     window.location.href = "/controller";
   });
+
+  // LOGIC FOR CONTROLLER
+  $(".player-img").attr("src", "/images/" + localStorage.getItem("playerAvatar"));
+  $(".player-name").text(localStorage.getItem("userName"));
 });
