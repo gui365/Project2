@@ -1,150 +1,150 @@
-id,category,difficulty,question,correct_answer,incorrect0,incorrect1,incorrect2
-1,Entertainment: Video Games,easy,In which series of games do you collect souls to empower you and buy weaponry and armor with?,Souls ,Final Fantasy ,Monster Hunter,The Legend of Zelda
-2,Entertainment: Film,easy,What name did Tom Hanks give to his volleyball companion in the film `Cast Away`?,Wilson,Friday,Jones,Billy
-3,Entertainment: Film,easy,When was the movie Con Air released?,1997,1985,1999,1990
-4,Entertainment: Film,easy,Who played the female lead in the 1933 film King Kong,Fay Wray,Jean Harlow,Vivien Leigh,Mae West
-5,Entertainment: Television,easy,"In the TV show M*A*S*H, what was the nickname of Corporal Walter Reilly?",Radar,Hawkeye,Hot Lips,Trapper
-6,General Knowledge,easy,What name represents the letter M in the NATO phonetic alphabet?,Mike,Matthew,Mark,Max
-7,History,easy,How many manned moon landings have there been?,6,1,3,7
-8,Science & Nature,easy,What is the elemental symbol for mercury?,Hg,Me,Mc,Hy
-9,Science: Computers,easy,What does GHz stand for?,Gigahertz,Gigahotz,Gigahetz,Gigahatz
-10,Entertainment: Video Games,easy,Which game did NOT get financed via Crowdfunding?,Enter the Gungeon,Town of Salem,Undertale,Tower Unite
-11,Entertainment: Music,easy,The Red Hot Chili Pepper song Give It Away is from what album?,Blood Sugar Sex Magik,One Hot Minute,By the Way,Stadium Arcadium
-12,Science: Computers,easy,The programming language Swift was created to replace what other programming language?,Objective-C,C#,Ruby,C++
-13,Entertainment: Books,easy,Who wrote the novel Fear And Loathing In Las Vegas?,Hunter S. Thompson,F. Scott Fitzgerald,Henry Miller,William S. Burroughs
-14,Entertainment: Video Games,easy,"If a 360 no-scope is one full rotation before shooting, how many rotations would a 1080 no-scope be?",3,4,2,5
-15,Politics,easy,The largest consumer market in 2015 was...,The United States of America,Germany,Japan,United Kingdom
-16,Entertainment: Video Games,easy,Tomb Raider icon Lara Croft was originally called...,Laura Cruz,Laura Craft,Laura Croft,Lara Craft
-17,Science: Gadgets,easy,The term battery to describe an electrical storage device was coined by?,Benjamin Franklin,Nikola Tesla,Luigi Galvani, Alessandro Volta
-18,Entertainment: Video Games,easy,"In the 2002 video game Kingdom Hearts, how many Keyblades are usable?",18,13,16,15
-19,Entertainment: Japanese Anime & Manga,easy,What is the name of the stuffed lion in Bleach?,Kon,Jo,Urdiu,Chad
-20,Animals,easy,How many legs do butterflies have?,6,2,4,0
-21,Entertainment: Japanese Anime & Manga,easy,Who is the true moon princess in Sailor Moon?,Sailor Moon,Sailor Venus,Sailor Mars,Sailor Jupiter
-22,Sports,easy,Which driver has been the Formula 1 world champion for a record 7 times?,Michael Schumacher,Ayrton Senna,Fernando Alonso,Jim Clark
-23,Geography,easy,Which UK country features a dragon on their flag?,Wales,England,North Ireland,Scotland
-24,Entertainment: Video Games,easy,Which of these Starbound races has a Wild West culture?,Novakid,Avian,Human,Hylotl
-25,Entertainment: Video Games,easy,What is Gabe Newell's favorite class in Team Fortress 2?,Spy,Heavy,Medic,Pyro
-26,Entertainment: Video Games,easy,TF2: What code does Soldier put into the door keypad in Meet the Spy?,1111,1432,1337,No code
-27,Entertainment: Video Games,easy,Who is the main protagonist of Dead Space?,Isaac Clarke,Commander Shepard,Gordon Freeman,Master Chief
-28,Entertainment: Music,easy,Which Beatles album does NOT feature any of the band members on it's cover?,The Beatles (White Album),Rubber Soul,Abbey Road,Magical Mystery Tour
-29,Science & Nature,easy,The medical term for the belly button is which of the following?,Umbilicus,Nevus,Nares,Paxillus
-30,Science: Computers,easy,"On Twitter, what is the character limit for a Tweet?",140,120,160,100
-31,Entertainment: Music,easy,"Sting, the lead vocalist of The Police, primarily plays what instrument?",Bass Guitar,Drums,Guitar,Keyboards
-32,Entertainment: Television,easy,When did the TV show Rick and Morty first air on Adult Swim?,2013,2014,2016,2015
-33,History,easy,What was the first sport to have been played on the moon?,Golf,Football,Tennis,Soccer
-34,Entertainment: Music,easy,"According to the American rapper Nelly, what should you do when its hot in here?",Take off all your clothes,Take a cool shower,Drink some water,Go skinny dipping
-35,Entertainment: Video Games,easy,"Which Sonic the Hedgehog game was originally supposed to be packaged with Sonic 3, but was cut in half due to time constraints?",Sonic &amp; Knuckles,Sonic 2,Sonic CD,Sonic 3D Blast
-36,Entertainment: Music,easy,What collaborative album was released by Kanye West and Jay-Z in 2011?,Watch the Throne,Distant Relatives,What a Time to be Alive,Unfinished Business
-37,Entertainment: Music,easy,Kanye West's Gold Digger; featured which Oscar-winning actor?,Jamie Foxx,Alec Baldwin,Dwayne Johnson, Bruce Willis
-38,Sports,easy,"In Baseball, how many times does the ball have to be pitched outside of the strike zone before the batter is walked?",4,1,2,3
-39,Entertainment: Cartoon & Animations,easy,What is lost in Hawaiian and is also the name of a little girl in a 2002 film which features a alien named Stitch?,Lilo,Lolo,Lucy,Lulu
-40,Science: Computers,easy,The numbering system with a radix of 16 is more commonly referred to as ,Hexidecimal,Binary,Duodecimal,Octal
-41,Entertainment: Television,easy,"In Star Trek: The Next Generation, what is the name of Data's cat?",Spot,Mittens,Tom,Kitty
-42,History,easy,How long did World War II last?,6 years,4 years,5 years,7 years
-43,Entertainment: Cartoon & Animations,easy,Who created the Cartoon Network series Regular Show?,J. G. Quintel,Ben Bocquelet,Pendleton Ward,Rebecca Sugar
-44,Vehicles,easy,The LS2 engine is how many cubic inches?,364,346,376,402
-45,Vehicles,easy,The LS3 engine is how many cubic inches?,376,346,364,427
-46,Science: Computers,easy,How many values can a single byte represent?,256,8,1,1024
-47,Entertainment: Video Games,easy,What is the name of the game developer who created Call Of Duty: Zombies?,Treyarch,Sledgehammer Games,Infinity Ward,Naughty Dog
-48,Entertainment: Film,easy,What is the name of the island that ;Jurassic Park is built on?,Isla Nublar,Isla Sorna,Isla Muerta,Isla Pena
-49,Celebrities,easy,By which name is Ramon Estevez better known as?,Martin Sheen,Charlie Sheen,Ramon Sheen,Emilio Estevez
-50,Politics,medium,Who was the British Prime Minister at the outbreak of the Second World War?,Neville Chamberlain,Clement Attlee,Winston Churchill,Stanley Baldwin
-51,Entertainment: Comics,medium,"In Marvel Comics, Taurus is the founder and leader of which criminal organization?",Zodiac,Scorpio,Tiger Mafia,The Union
-52,Entertainment: Video Games,medium,What was the character Kirby originally going to be named?,Popopo,Dedede,Waddle Dee,Prince Puff
-53,History,medium,"During the Mongolian invasions of Japan, what were the Mongol boats mostly stopped by?",Typhoons,Tornados,Economic depression,Samurai
-54,Entertainment: Video Games,medium,Who was the mascot of SEGA mascot before Sonic the Hedgehog?,Alex Kidd,Opa Opa,NiGHTS,Ristar
-55,History,medium,During what war did the Cuban Missile Crisis occur?,Cold War,World War I,World War II,Revolutionary War
-56,Entertainment: Music,medium,Which Elton John hit starts with the line When are you gonna come down?,Goodbye Yellow Brick Road,Rocket Man,Bennie and the Jets,Crocodile Rock
-57,Entertainment: Music,medium,Who had a 1976 hit with the song 'You Make Me Feel Like Dancing'?,Leo Sayer,Elton John,Billy Joel,Andy Gibb
-58,Entertainment: Film,medium,"In the 1984 movie The Terminator, what model number is the Terminator portrayed by Arnold Schwarzenegger?",T-800,I-950,T-888,T-1000
-59,Entertainment: Music,medium,Which of these is NOT an album released by The Beatles?,The Wall,Abbey Road,Magical Mystery Tour,Revolver
-60,General Knowledge,medium,Rolex is a company that specializes in what type of product?,Watches,Cars,Computers,Sports equipment
-61,Celebrities,medium,Paul McCartney has always used his middle name. What is his real first name? ,James,John,Jack,Justin
-62,Science & Nature,medium,What mineral has the lowest number on the Mohs scale?,Talc,Quartz,Diamond,Gypsum
-63,Entertainment: Books,medium,"In the The Hobbit, who kills Smaug?",Bard,Bilbo Baggins,Gandalf the Grey,Frodo
-64,Science: Computers,medium,All of the following programs are classified as raster graphics editors EXCEPT:,Inkscape,Paint.NET,GIMP,Adobe Photoshop
-65,Science & Nature,medium,"What polymer is used to make CDs, safety goggles and riot shields?",Polycarbonate,Rubber,Nylon,Bakelite
-66,Science & Nature,medium,Which part of the body does glaucoma affect?,Eyes,Throat,Stomach,Blood
-67,General Knowledge,medium,What is the Swedish word for window?,F&ouml;nster,H&aring;l,Sk&auml;rm,Ruta
-68,Science: Computers,medium,In the server hosting industry IaaS stands for...,Infrastructure as a Service,Internet as a Service,Internet and a Server,Infrastructure as a Server
-69,Geography,medium,What is the right way to spell the capital of Hungary?,Budapest,Boodapest,Bhudapest,Budapast
-70,Sports,medium,Which car manufacturer won the 2016 24 Hours of Le Mans?,Porsche,Toyota,Audi,Ferrari
-71,Entertainment: Video Games,medium,The creator of the Touhou Project series is:,ZUN,SUN,RUN,PUN
-72,Entertainment: Video Games,medium,"In Overwatch, what is the name of Mercy's ultimate ability?",Valkyrie,Earthshatter,Rocket Barrage,Molten Core
-73,Entertainment: Music,medium,"Which of these songs by artist Eminem contain the lyric Nice to meet you. Hi, my name is... I forgot my name!?",Rain Man,Without Me,Kim,Square Dance
-74,Entertainment: Music,medium,What is the real name of Canadian electronic music producer deadmau5?,Joel Zimmerman,Sonny Moore,Adam Richard Wiles,Thomas Wesley Pentz
-75,Entertainment: Video Games,medium,How many normal endings are there in Cry Of Fear's campaign mode?,4,5,3,6
-76,History,medium,Which WWII tank ace is credited with having destroyed the most tanks?,Kurt Knispel,Michael Wittmann,Walter Kniep,Otto Carius
-77,Geography,medium,What is the official language of Bhutan?,Dzongkha,Ladakhi,Karen,Groma
-78,Entertainment: Music,medium,Which one of these rappers is NOT a member of the rap group Wu-Tang Clan?,Dr.Dre,Ol' Dirty Bastard,GZA,Method Man
-79,Entertainment: Video Games,medium,In what Anno game did the eco balance an part of the game play?,Anno 2070,Anno 1404,Anno 2205, Anno 1701
-80,Animals,medium,Which of these species is not extinct?,Komodo dragon,Japanese sea lion,Tasmanian tiger,Saudi gazelle
-81,Sports,medium,"In 2016, who won the Formula 1 World Constructor's Championship for the third time in a row?",Mercedes-AMG Petronas,Scuderia Ferrari,McLaren Honda,Red Bull Racing Renault
-82,Entertainment: Television,medium,What is the name of the Flash and Arrow spinoff featuring a team of characters that have appeared on both shows?,Legends of Tomorrow,Heroes of Tomorrow,The Justice Society of America,The Justice Society
-83,Entertainment: Video Games,medium,"In Overwatch, how old is Reinhardt Wilhelm?",61,59,65,62
-84,Entertainment: Cartoon & Animations,medium,"In The Amazing World of Gumball, who is the principal of Elmore Junior High?",Principal Brown,Principal Small,Principal Brawn,Principal Simeon
-85,History,medium,What was the total length of the Titanic?,882 ft | 268.8 m,759 ft | 231.3 m,1042 ft | 317.6 m,825 ft | 251.5 m
-86,Entertainment: Cartoon & Animations,medium,Which one of these cartoon characters is NOT voiced by Rob Paulsen?,Max Tennyson (Ben 10),Carl Wheezer (Jimmy Neutron),Yakko Warner (Animaniacs),"The Mask (The Mask, TV Series)"
-87,Entertainment: Video Games,medium,"In Terraria, which of these items is NOT crafted at a Mythril Anvil?",Ankh Charm,Venom Staff,Sky Fracture,Orichalcum Tools
-88,Entertainment: Books,medium,"What is the name of the gang that Ponyboy is a part of in the book, The Outsiders?",The Greasers,The Outsiders,The Mafia,The Socs
-89,Entertainment: Video Games,medium,"In Dota 2, what is Earthshaker's real name?",Raigor Stonehoof,Banehallow Ambry,Carl,Barathrum
-90,Entertainment: Japanese Anime & Manga,medium,The character Plum from No Game No Life is of what race?,Dhampir,Fl&uuml;gel,Imanity,Seiren
-91,Entertainment: Japanese Anime & Manga,medium,Who is the creator of the manga series One Piece?,Eiichiro Oda,Yoshihiro Togashi,Hayao Miyazaki,Masashi Kishimoto
-92,Entertainment: Video Games,medium,When was Club Penguin launched?,24-Oct-05,21-Oct-05,29-Mar-06,22-Nov-04
-93,Entertainment: Video Games,medium,What is the name of the creature that the main character befriends in The Last Guardian?,Trico,Nico,Wolf,Andazi
-94,Entertainment: Film,medium,Mark Wahlberg played the titular character of which 2008 video-game adaptation?,Max Payne,Alan Wake,Hitman,God Of War
-95,Entertainment: Video Games,medium,"In Call Of Duty: Zombies, what does the game traditionally reward you for completing a boss round?",Max Ammo,A Pack-A-Punched gun,Death Machine,Monkey Bombs
-96,Entertainment: Video Games,medium,What was the main currency in Club Penguin?,Coins,Stamps,Tickets,Gems
-97,General Knowledge,medium,Earl Grey tea is black tea flavoured with what?,Bergamot oil,Lavender,Vanilla,Honey
-98,Entertainment: Video Games,medium,"In Guild Wars 2, what is the name of the home instance for the Charr race?",Hero's Canton,Gladium Canton,Praetor's Canton,Ligacus Notos
-99,Entertainment: Film,medium,"In Mulan (1998), who is the leader of the Huns?",Shan Yu,Chien-Po,Li Shang,Fa Zhou
-100,Entertainment: Music,hard,On which Beatles album would you find the song 'Eleanor Rigby'?,Revolver,Help!,Rubber Soul,Abbey Road
-101,Science & Nature,hard,Which of the following liquids is least viscous? Assume temperature is 25&deg;C.,Acetone,Water,Mercury,Benzene
-102,Entertainment: Books,hard,Who wrote the novel Moby-Dick?,Herman Melville,William Golding,William Shakespeare,J. R. R. Tolkien
-103,Entertainment: Video Games,hard,"In the game The Sims, how many Simoleons does each family start with?","20,000","10,000","15,000","25,000"
-104,Science & Nature,hard,How many legs is it biologically impossible for a centipede to have?,100,26,50,74
-105,History,hard,What was the name of the spy ring that helped the United States win the Revolutionary War?,Culper Ring,New York Spy Ring,Washington's Spies,Unnamed
-106,Entertainment: Music,hard,Which M83 album is the song Midnight City featured in?,"Hurry Up, We're Dreaming",Saturdays = Youth,Before the Dawn Heals Us,Junk
-107,Geography,hard,The mountainous Khyber Pass connects which of the two following countries?,Afghanistan and Pakistan,India and Nepal,Pakistan and India,Tajikistan and Kyrgyzstan
-108,Geography,hard,In 2012 the German-speaking microstate Liechtenstein in Central Europe had a population of how many inhabitants?,"36,600","2,400","90,000","323,400"
-109,Entertainment: Video Games,hard,"In Sonic the Hedgehog 2 for the Sega Genesis, what do you input in the sound test screen to access the secret level select?",The Lead Programmer's birthday,The first release date of Sonic the Hedgehog,The date Sonic Team was founded,The first release date of Sonic the Hedgehog 2
-110,Mythology,hard,"In Greek Mythology, who was the daughter of King Minos?",Ariadne,Athena,Ariel,Alana
-111,General Knowledge,hard,What is the romanized Chinese word for airplane?,Feiji,Qiche,Zongxian,Huojian
-112,General Knowledge,hard,Disney's Haunted Mansion is home to a trio of Hitchhiking Ghosts. Which of these is NOT one of them?,Harry,Gus,Phineas,Ezra
-113,Entertainment: Japanese Anime & Manga,hard,Which of the following countries does JoJo's Bizarre Adventure: Stardust Crusaders not take place in?,Philippines,India,Pakistan,Egypt
-114,Entertainment: Film,hard,In what Disney movie can you spot the character Pac-Man in if you look closely enough in some scenes?,Tron,Big Hero 6,Fantasia,"Monsters, Inc."
-115,Entertainment: Japanese Anime & Manga,hard,What is the last line muttered in the anime film The End of Evangelion?,How disgusting.,"Idiot, I won't let you kill me!",Nothing.,"Goddammit, Shinji."
-116,Vehicles,hard,Which one of these chassis codes are used by BMW 3-series?,E46,E39,E85,F10
-117,Entertainment: Television,hard,In It's Always Sunny in Philadelphia what was the name of Frank's wrestling persona?,The Trash Man,Bird of War,Day Man,The Maniac
-118,Entertainment: Comics,hard,"In the Homestuck Series, what is the alternate name for the Kingdom of Lights?",Prospit,No Name,Golden City,Yellow Moon
-119,Vehicles,hard,What engine is in the Lexus SC400?,1UZ-FE,2JZ-GTE,7M-GTE,5M-GE
-120,Entertainment: Video Games,hard,"In Animal Crossing: New Leaf, which of these paintings from Redd's Art Gallery is always genuine?",Warm Painting,Jolly Painting,Neutral Painting,Wistful Painting
-121,Entertainment: Music,hard,All the Boys by Panic! At the Disco was released as a bonus track on what album?,"Too Weird To Live, Too Rare To Die!",A Fever You Can't Sweat Out,Death Of A Bachelor,Vices &amp; Virtues
-122,Science: Computers,hard,America Online (AOL) started out as which of these online service providers?,Quantum Link,CompuServe,Prodigy,GEnie
-123,Entertainment: Musicals & Theatres,hard,Who serves as the speaker of the prologue in Shakespeare's Romeo and Juliet?,Chorus,Montague,Refrain,Capulet
-124,Entertainment: Books,hard,Which of the following is NOT a work done by Shakespeare?,Trial of Temperance,Measure For Measure,Titus Andronicus,Cymbeline
-125,Entertainment: Video Games,hard,In the original DOOM (1993) which of the following is NOT a cheat code?,IDCLIP,IDFA,IDDQD,IDSPISPOPD
-126,Science: Computers,hard,What does the International System of Quantities refer 1024 bytes as?,Kibibyte,Kylobyte,Kilobyte,Kelobyte
-127,Science: Gadgets,hard,Which of the following cellular device companies is NOT headquartered in Asia?,Nokia,LG Electronics,Samsung,HTC
-128,History,hard,What was the aim of the Umbrella Revolution in Hong Kong in 2014?,Genuine universal suffrage,Gaining Independence,Go back under British Rule,Lower taxes
-129,Entertainment: Video Games,hard,What programming language was used to create the game Minecraft?,Java,HTML 5,C++,Python
-130,Geography,hard,Which of these cities has a 4&deg; East longitude. ,Amsterdam,Rio de Janero,Toronto,Hong Kong
-131,Entertainment: Music,hard,Who is a pioneer of Minimal Music in 1960s?,Steve Reich,Wolfgang Amadeus Mozart,Brian Eno,Sigur R&oacute;s
-132,Entertainment: Music,hard,What was the name of the hip hop group Kanye West was a member of in the late 90s?,The Go-Getters,The Jumpers,The Kickstarters,The Beat-Busters
-133,Entertainment: Video Games,hard,"In Call Of Duty: Zombies, which map's opening cutscene shows Richtofen killing another version of himself?",The Giant,Shadows Of Evil,Der Eisendrache,Moon
-134,History,hard,What was the name of the German offensive operation in October 1941 to take Moscow before winter?,Operation Typhoon,Operation Sunflower,Operation Barbarossa,Case Blue
-135,Entertainment: Film,hard,In what year does Jurassic World open in the Jurassic Park universe?,2005,2007,2015,2020
-136,Entertainment: Film,hard,"Which actors made up the trio in The Good, the Bad, and the Ugly? ","Clint Eastwood, Eli Wallach, and Lee Van Cleef","Sergio Leone, Ennio Morricone, and Tonino Delli Colli","Yul Brynner, Steve McQueen, and Charles Bronson","Aldo Giuffr&egrave;, Mario Brega, and Luigi Pistilli"
-137,Geography,hard,What is the capital city of Bermuda?,Hamilton,Santo Dominigo,San Juan,Havana
-138,Entertainment: Books,hard,"In Margaret Atwood's The Handmaid's Tale, what is Offred's real name is implied to be?",June,August,April,May
-139,Entertainment: Video Games,hard,"In Guild Wars 2, which Chinese Zodiac sign is not represented in the Zodiac Weapon Set?",Ox,Rabbit,Tiger,Goat
-140,Entertainment: Video Games,hard,"In World of Warcraft, which raid instance features a chess event?",Karazhan,Zul'Aman,Blackwing Lair,Temple of Ahn'Qiraj
-141,Entertainment: Video Games,hard,"In Guild Wars 2, what is the first name of Kasmeer Meade's brother?",Kyle,Dave,Kevin,Ken
-142,Entertainment: Books,hard,"In the Magic: The Gathering universe, the Fallen Empires expansion takes place on which continent?",Sarpadia,Otaria,Terisiare,Shiv
-143,Entertainment: Video Games,hard,"In Guild Wars 2, what is the name of the elder dragon which is fought once all lanes have been cleared in the Dragon's Stand zone?",Mouth of Mordremoth,Wing of Mordremoth,Fang of Mordremoth,Claw of Mordremoth
-144,Entertainment: Video Games,hard,"In Guild Wars 2, which jumping puzzle rewards players with a Rich Silver Vein instead of a chest at the end?",Grendich Gamble,Branded Mine,Pig Iron Quarry,Coddler's Cove
-145,Entertainment: Video Games,hard,"In Guild Wars 2, what is the name of the legendary golden lightning sword with dragons twisting up the blade?",Bolt,Kudzu,Twilight,Astralaria
-146,Entertainment: Video Games,hard,"In Guild Wars 2, what is the name of the legendary green longbow covered in flowers?",Kudzu,Quip,The Dreamer,Nevermore
-147,Entertainment: Video Games,hard,"In Guild Wars 2, what is the name of the legendary mace with a disco ball as its head?",The Moot,The Predator,Quip,The Dreamer
-148,Entertainment: Comics,hard,"In 1978, Superman teamed up with what celebrity, to defeat an alien invasion?",Muhammad Ali,Mike Tyson,Sylvester Stallone,Arnold Schwarzenegger
-149,Science & Nature,hard,Which of the following is the term for surgical complications resulting from surgical sponges left inside the patient's body?,Gossypiboma,Gongoozler,Jentacular,Meupareunia
+id,category,difficulty,question,optionA,optionB,optionC,optionD,correct
+1,Entertainment: Video Games,easy,In which series of games do you collect souls to empower you and buy weaponry and armor with?,Souls ,Final Fantasy ,Monster Hunter,The Legend of Zelda,A
+2,Entertainment: Film,easy,What name did Tom Hanks give to his volleyball companion in the film `Cast Away`?,Friday,Wilson,Jones,Billy,B
+3,Entertainment: Film,easy,When was the movie Con Air released?,1999,1985,1997,1990,C
+4,Entertainment: Film,easy,Who played the female lead in the 1933 film King Kong,Mae West,Jean Harlow,Vivien Leigh,Fay Wray,D
+5,Entertainment: Television,easy,"In the TV show M*A*S*H, what was the nickname of Corporal Walter Reilly?",Radar,Hawkeye,Hot Lips,Trapper,A
+6,General Knowledge,easy,What name represents the letter M in the NATO phonetic alphabet?,Matthew,Mike,Mark,Max,B
+7,History,easy,How many manned moon landings have there been?,3,1,6,7,C
+8,Science & Nature,easy,What is the elemental symbol for mercury?,Hy,Me,Mc,Hg,D
+9,Science: Computers,easy,What does GHz stand for?,Gigahertz,Gigahotz,Gigahetz,Gigahatz,A
+10,Entertainment: Video Games,easy,Which game did NOT get financed via Crowdfunding?,Town of Salem,Enter the Gungeon,Undertale,Tower Unite,B
+11,Entertainment: Music,easy,The Red Hot Chili Pepper song Give It Away is from what album?,By the Way,One Hot Minute,Blood Sugar Sex Magik,Stadium Arcadium,C
+12,Science: Computers,easy,The programming language Swift was created to replace what other programming language?,C++,C#,Ruby,Objective-C,D
+13,Entertainment: Books,easy,Who wrote the novel Fear And Loathing In Las Vegas?,Hunter S. Thompson,F. Scott Fitzgerald,Henry Miller,William S. Burroughs,A
+14,Entertainment: Video Games,easy,"If a 360 no-scope is one full rotation before shooting, how many rotations would a 1080 no-scope be?",4,3,2,5,B
+15,Politics,easy,The largest consumer market in 2015 was...,Japan,Germany,The United States of America,United Kingdom,C
+16,Entertainment: Video Games,easy,Tomb Raider icon Lara Croft was originally called...,Lara Craft,Laura Craft,Laura Croft,Laura Cruz,D
+17,Science: Gadgets,easy,The term battery to describe an electrical storage device was coined by?,Benjamin Franklin,Nikola Tesla,Luigi Galvani, Alessandro Volta,A
+18,Entertainment: Video Games,easy,"In the 2002 video game Kingdom Hearts, how many Keyblades are usable?",13,18,16,15,B
+19,Entertainment: Japanese Anime & Manga,easy,What is the name of the stuffed lion in Bleach?,Urdiu,Jo,Kon,Chad,C
+20,Animals,easy,How many legs do butterflies have?,0,2,4,6,D
+21,Entertainment: Japanese Anime & Manga,easy,Who is the true moon princess in Sailor Moon?,Sailor Moon,Sailor Venus,Sailor Mars,Sailor Jupiter,A
+22,Sports,easy,Which driver has been the Formula 1 world champion for a record 7 times?,Ayrton Senna,Michael Schumacher,Fernando Alonso,Jim Clark,B
+23,Geography,easy,Which UK country features a dragon on their flag?,North Ireland,England,Wales,Scotland,C
+24,Entertainment: Video Games,easy,Which of these Starbound races has a Wild West culture?,Hylotl,Avian,Human,Novakid,D
+25,Entertainment: Video Games,easy,What is Gabe Newell's favorite class in Team Fortress 2?,Spy,Heavy,Medic,Pyro,A
+26,Entertainment: Video Games,easy,TF2: What code does Soldier put into the door keypad in Meet the Spy?,1432,1111,1337,No code,B
+27,Entertainment: Video Games,easy,Who is the main protagonist of Dead Space?,Gordon Freeman,Commander Shepard,Isaac Clarke,Master Chief,C
+28,Entertainment: Music,easy,Which Beatles album does NOT feature any of the band members on it's cover?,Magical Mystery Tour,Rubber Soul,Abbey Road,The Beatles (White Album),D
+29,Science & Nature,easy,The medical term for the belly button is which of the following?,Umbilicus,Nevus,Nares,Paxillus,A
+30,Science: Computers,easy,"On Twitter, what is the character limit for a Tweet?",120,140,160,100,B
+31,Entertainment: Music,easy,"Sting, the lead vocalist of The Police, primarily plays what instrument?",Guitar,Drums,Bass Guitar,Keyboards,C
+32,Entertainment: Television,easy,When did the TV show Rick and Morty first air on Adult Swim?,2015,2014,2016,2013,D
+33,History,easy,What was the first sport to have been played on the moon?,Golf,Football,Tennis,Soccer,A
+34,Entertainment: Music,easy,"According to the American rapper Nelly, what should you do when its hot in here?",Take a cool shower,Take off all your clothes,Drink some water,Go skinny dipping,B
+35,Entertainment: Video Games,easy,"Which Sonic the Hedgehog game was originally supposed to be packaged with Sonic 3, but was cut in half due to time constraints?",Sonic CD,Sonic 2,Sonic & Knuckles,Sonic 3D Blast,C
+36,Entertainment: Music,easy,What collaborative album was released by Kanye West and Jay-Z in 2011?,Unfinished Business,Distant Relatives,What a Time to be Alive,Watch the Throne,D
+37,Entertainment: Music,easy,Kanye West's Gold Digger featured which Oscar-winning actor?,Jamie Foxx,Alec Baldwin,Dwayne Johnson, Bruce Willis,A
+38,Sports,easy,"In Baseball, how many times does the ball have to be pitched outside of the strike zone before the batter is walked?",1,4,2,3,B
+39,Entertainment: Cartoon & Animations,easy,What is lost in Hawaiian and is also the name of a little girl in a 2002 film which features a alien named Stitch?,Lucy,Lolo,Lilo,Lulu,C
+40,Science: Computers,easy,The numbering system with a radix of 16 is more commonly referred to as,Octal,Binary,Duodecimal,Hexidecimal,D
+41,Entertainment: Television,easy,"In Star Trek: The Next Generation, what is the name of Data's cat?",Spot,Mittens,Tom,Kitty,A
+42,History,easy,How long did World War II last?,4 years,6 years,5 years,7 years,B
+43,Entertainment: Cartoon & Animations,easy,Who created the Cartoon Network series Regular Show?,Pendleton Ward,Ben Bocquelet,J. G. Quintel,Rebecca Sugar,C
+44,Vehicles,easy,The LS2 engine is how many cubic inches?,402,346,376,364,D
+45,Vehicles,easy,The LS3 engine is how many cubic inches?,376,346,364,427,A
+46,Science: Computers,easy,How many values can a single byte represent?,8,256,1,1024,B
+47,Entertainment: Video Games,easy,What is the name of the game developer who created Call Of Duty: Zombies?,Infinity Ward,Sledgehammer Games,Treyarch,Naughty Dog,C
+48,Entertainment: Film,easy,What is the name of the island that Jurassic Park is built on?,Isla Pena,Isla Sorna,Isla Muerta,Isla Nublar,D
+49,Celebrities,easy,By which name is Ramon Estevez better known as?,Martin Sheen,Charlie Sheen,Ramon Sheen,Emilio Estevez,A
+50,Politics,medium,Who was the British Prime Minister at the outbreak of the Second World War?,Clement Attlee,Neville Chamberlain,Winston Churchill,Stanley Baldwin,B
+51,Entertainment: Comics,medium,"In Marvel Comics, Taurus is the founder and leader of which criminal organization?",Tiger Mafia,Scorpio,Zodiac,The Union,C
+52,Entertainment: Video Games,medium,What was the character Kirby originally going to be named?,Prince Puff,Dedede,Waddle Dee,Popopo,D
+53,History,medium,"During the Mongolian invasions of Japan, what were the Mongol boats mostly stopped by?",Typhoons,Tornados,Economic depression,Samurai,A
+54,Entertainment: Video Games,medium,Who was the mascot of SEGA mascot before Sonic the Hedgehog?,Opa Opa,Alex Kidd,NiGHTS,Ristar,B
+55,History,medium,During what war did the Cuban Missile Crisis occur?,World War II,World War I,Cold War,Revolutionary War,C
+56,Entertainment: Music,medium,Which Elton John hit starts with the line When are you gonna come down?,Crocodile Rock,Rocket Man,Bennie and the Jets,Goodbye Yellow Brick Road,D
+57,Entertainment: Music,medium,Who had a 1976 hit with the song 'You Make Me Feel Like Dancing'?,Leo Sayer,Elton John,Billy Joel,Andy Gibb,A
+58,Entertainment: Film,medium,"In the 1984 movie The Terminator, what model number is the Terminator portrayed by Arnold Schwarzenegger?",I-950,T-800,T-888,T-1000,B
+59,Entertainment: Music,medium,Which of these is NOT an album released by The Beatles?,Magical Mystery Tour,Abbey Road,The Wall,Revolver,C
+60,General Knowledge,medium,Rolex is a company that specializes in what type of product?,Sports equipment,Cars,Computers,Watches,D
+61,Celebrities,medium,Paul McCartney has always used his middle name. What is his real first name? ,James,John,Jack,Justin,A
+62,Science & Nature,medium,What mineral has the lowest number on the Mohs scale?,Quartz,Talc,Diamond,Gypsum,B
+63,Entertainment: Books,medium,"In the The Hobbit, who kills Smaug?",Gandalf the Grey,Bilbo Baggins,Bard,Frodo,C
+64,Science: Computers,medium,All of the following programs are classified as raster graphics editors EXCEPT:,Adobe Photoshop,Paint.NET,GIMP,Inkscape,D
+65,Science & Nature,medium,"What polymer is used to make CDs, safety goggles and riot shields?",Polycarbonate,Rubber,Nylon,Bakelite,A
+66,Science & Nature,medium,Which part of the body does glaucoma affect?,Throat,Eyes,Stomach,Blood,B
+67,General Knowledge,medium,What is the Swedish word for window?,Skärm,Hål,Fönster,Ruta,C
+68,Science: Computers,medium,In the server hosting industry IaaS stands for...,Infrastructure as a Server,Internet as a Service,Internet and a Server,Infrastructure as a Service,D
+69,Geography,medium,What is the right way to spell the capital of Hungary?,Budapest,Boodapest,Bhudapest,Budapast,A
+70,Sports,medium,Which car manufacturer won the 2016 24 Hours of Le Mans?,Toyota,Porsche,Audi,Ferrari,B
+71,Entertainment: Video Games,medium,The creator of the Touhou Project series is:,RUN,SUN,ZUN,PUN,C
+72,Entertainment: Video Games,medium,"In Overwatch, what is the name of Mercy's ultimate ability?",Molten Core,Earthshatter,Rocket Barrage,Valkyrie,D
+73,Entertainment: Music,medium,"Which of these songs by artist Eminem contain the lyric Nice to meet you. Hi, my name is... I forgot my name!?",Rain Man,Without Me,Kim,Square Dance,A
+74,Entertainment: Music,medium,What is the real name of Canadian electronic music producer deadmau5?,Sonny Moore,Joel Zimmerman,Adam Richard Wiles,Thomas Wesley Pentz,B
+75,Entertainment: Video Games,medium,How many normal endings are there in Cry Of Fear's campaign mode?,3,5,4,6,C
+76,History,medium,Which WWII tank ace is credited with having destroyed the most tanks?,Otto Carius,Michael Wittmann,Walter Kniep,Kurt Knispel,D
+77,Geography,medium,What is the official language of Bhutan?,Dzongkha,Ladakhi,Karen,Groma,A
+78,Entertainment: Music,medium,Which one of these rappers is NOT a member of the rap group Wu-Tang Clan?,Ol' Dirty Bastard,Dr.Dre,GZA,Method Man,B
+79,Entertainment: Video Games,medium,In what Anno game did the eco balance an part of the game play?,Anno 2205,Anno 1404,Anno 2070,Anno 1701,C
+80,Animals,medium,Which of these species is not extinct?,Saudi gazelle,Japanese sea lion,Tasmanian tiger,Komodo dragon,D
+81,Sports,medium,"In 2016, who won the Formula 1 World Constructor's Championship for the third time in a row?",Mercedes-AMG Petronas,Scuderia Ferrari,McLaren Honda,Red Bull Racing Renault,A
+82,Entertainment: Television,medium,What is the name of the Flash and Arrow spinoff featuring a team of characters that have appeared on both shows?,Heroes of Tomorrow,Legends of Tomorrow,The Justice Society of America,The Justice Society,B
+83,Entertainment: Video Games,medium,"In Overwatch, how old is Reinhardt Wilhelm?",65,59,61,62,C
+84,Entertainment: Cartoon & Animations,medium,"In The Amazing World of Gumball, who is the principal of Elmore Junior High?",Principal Simeon,Principal Small,Principal Brawn,Principal Brown,D
+85,History,medium,What was the total length of the Titanic?,882 ft | 268.8 m,759 ft | 231.3 m,1042 ft | 317.6 m,825 ft | 251.5 m,A
+86,Entertainment: Cartoon & Animations,medium,Which one of these cartoon characters is NOT voiced by Rob Paulsen?,Carl Wheezer (Jimmy Neutron),Max Tennyson (Ben 10),Yakko Warner (Animaniacs),"The Mask (The Mask, TV Series)",B
+87,Entertainment: Video Games,medium,"In Terraria, which of these items is NOT crafted at a Mythril Anvil?",Sky Fracture,Venom Staff,Ankh Charm,Orichalcum Tools,C
+88,Entertainment: Books,medium,"What is the name of the gang that Ponyboy is a part of in the book, The Outsiders?",The Socs,The Outsiders,The Mafia,The Greasers,D
+89,Entertainment: Video Games,medium,"In Dota 2, what is Earthshaker's real name?",Raigor Stonehoof,Banehallow Ambry,Carl,Barathrum,A
+90,Entertainment: Japanese Anime & Manga,medium,The character Plum from No Game No Life is of what race?,Flügel,Dhampir,Imanity,Seiren,B
+91,Entertainment: Japanese Anime & Manga,medium,Who is the creator of the manga series One Piece?,Hayao Miyazaki,Yoshihiro Togashi,Eiichiro Oda,Masashi Kishimoto,C
+92,Entertainment: Video Games,medium,When was Club Penguin launched?,22-Nov-04,21-Oct-05,29-Mar-06,24-Oct-05,D
+93,Entertainment: Video Games,medium,What is the name of the creature that the main character befriends in The Last Guardian?,Trico,Nico,Wolf,Andazi,A
+94,Entertainment: Film,medium,Mark Wahlberg played the titular character of which 2008 video-game adaptation?,Alan Wake,Max Payne,Hitman,God Of War,B
+95,Entertainment: Video Games,medium,"In Call Of Duty: Zombies, what does the game traditionally reward you for completing a boss round?",Death Machine,A Pack-A-Punched gun,Max Ammo,Monkey Bombs,C
+96,Entertainment: Video Games,medium,What was the main currency in Club Penguin?,Gems,Stamps,Tickets,Coins,D
+97,General Knowledge,medium,Earl Grey tea is black tea flavoured with what?,Bergamot oil,Lavender,Vanilla,Honey,A
+98,Entertainment: Video Games,medium,"In Guild Wars 2, what is the name of the home instance for the Charr race?",Gladium Canton,Hero's Canton,Praetor's Canton,Ligacus Notos,B
+99,Entertainment: Film,medium,"In Mulan (1998), who is the leader of the Huns?",Li Shang,Chien-Po,Shan Yu,Fa Zhou,C
+100,Entertainment: Music,hard,On which Beatles album would you find the song 'Eleanor Rigby'?,Abbey Road,Help!,Rubber Soul,Revolver,D
+101,Science & Nature,hard,Which of the following liquids is least viscous? Assume temperature is 25°C.,Acetone,Water,Mercury,Benzene,A
+102,Entertainment: Books,hard,Who wrote the novel Moby-Dick?,William Golding,Herman Melville,William Shakespeare,J. R. R. Tolkien,B
+103,Entertainment: Video Games,hard,"In the game The Sims, how many Simoleons does each family start with?","15,000","10,000","20,000","25,000",C
+104,Science & Nature,hard,How many legs is it biologically impossible for a centipede to have?,74,26,50,100,D
+105,History,hard,What was the name of the spy ring that helped the United States win the Revolutionary War?,Culper Ring,New York Spy Ring,Washington's Spies,Unnamed,A
+106,Entertainment: Music,hard,Which M83 album is the song Midnight City featured in?,Saturdays = Youth,"Hurry Up, We're Dreaming",Before the Dawn Heals Us,Junk,B
+107,Geography,hard,The mountainous Khyber Pass connects which of the two following countries?,Pakistan and India,India and Nepal,Afghanistan and Pakistan,Tajikistan and Kyrgyzstan,C
+108,Geography,hard,In 2012 the German-speaking microstate Liechtenstein in Central Europe had a population of how many inhabitants?,"323,400","2,400","90,000","36,600",D
+109,Entertainment: Video Games,hard,"In Sonic the Hedgehog 2 for the Sega Genesis, what do you input in the sound test screen to access the secret level select?",The Lead Programmer's birthday,The first release date of Sonic the Hedgehog,The date Sonic Team was founded,The first release date of Sonic the Hedgehog 2,A
+110,Mythology,hard,"In Greek Mythology, who was the daughter of King Minos?",Athena,Ariadne,Ariel,Alana,B
+111,General Knowledge,hard,What is the romanized Chinese word for airplane?,Zongxian,Qiche,Feiji,Huojian,C
+112,General Knowledge,hard,Disney's Haunted Mansion is home to a trio of Hitchhiking Ghosts. Which of these is NOT one of them?,Ezra,Gus,Phineas,Harry,D
+113,Entertainment: Japanese Anime & Manga,hard,Which of the following countries does JoJo's Bizarre Adventure: Stardust Crusaders not take place in?,Philippines,India,Pakistan,Egypt,A
+114,Entertainment: Film,hard,In what Disney movie can you spot the character Pac-Man in if you look closely enough in some scenes?,Big Hero 6,Tron,Fantasia,"Monsters, Inc.",B
+115,Entertainment: Japanese Anime & Manga,hard,What is the last line muttered in the anime film The End of Evangelion?,Nothing.,"Idiot, I won't let you kill me!",How disgusting.,"Goddammit, Shinji.",C
+116,Vehicles,hard,Which one of these chassis codes are used by BMW 3-series?,F10,E39,E85,E46,D
+117,Entertainment: Television,hard,In It's Always Sunny in Philadelphia what was the name of Frank's wrestling persona?,The Trash Man,Bird of War,Day Man,The Maniac,A
+118,Entertainment: Comics,hard,"In the Homestuck Series, what is the alternate name for the Kingdom of Lights?",No Name,Prospit,Golden City,Yellow Moon,B
+119,Vehicles,hard,What engine is in the Lexus SC400?,7M-GTE,2JZ-GTE,1UZ-FE,5M-GE,C
+120,Entertainment: Video Games,hard,"In Animal Crossing: New Leaf, which of these paintings from Redd's Art Gallery is always genuine?",Wistful Painting,Jolly Painting,Neutral Painting,Warm Painting,D
+121,Entertainment: Music,hard,All the Boys by Panic! At the Disco was released as a bonus track on what album?,"Too Weird To Live, Too Rare To Die!",A Fever You Can't Sweat Out,Death Of A Bachelor,Vices & Virtues,A
+122,Science: Computers,hard,America Online (AOL) started out as which of these online service providers?,CompuServe,Quantum Link,Prodigy,GEnie,B
+123,Entertainment: Musicals & Theatres,hard,Who serves as the speaker of the prologue in Shakespeare's Romeo and Juliet?,Refrain,Montague,Chorus,Capulet,C
+124,Entertainment: Books,hard,Which of the following is NOT a work done by Shakespeare?,Cymbeline,Measure For Measure,Titus Andronicus,Trial of Temperance,D
+125,Entertainment: Video Games,hard,In the original DOOM (1993) which of the following is NOT a cheat code?,IDCLIP,IDFA,IDDQD,IDSPISPOPD,A
+126,Science: Computers,hard,What does the International System of Quantities refer 1024 bytes as?,Kylobyte,Kibibyte,Kilobyte,Kelobyte,B
+127,Science: Gadgets,hard,Which of the following cellular device companies is NOT headquartered in Asia?,Samsung,LG Electronics,Nokia,HTC,C
+128,History,hard,What was the aim of the Umbrella Revolution in Hong Kong in 2014?,Lower taxes,Gaining Independence,Go back under British Rule,Genuine universal suffrage,D
+129,Entertainment: Video Games,hard,What programming language was used to create the game Minecraft?,Java,HTML 5,C++,Python,A
+130,Geography,hard,Which of these cities has a 4° East longitude.,Rio de Janero,Amsterdam,Toronto,Hong Kong,B
+131,Entertainment: Music,hard,Who is a pioneer of Minimal Music in 1960s?,Brian Eno,Wolfgang Amadeus Mozart,Steve Reich,Sigur Rós,C
+132,Entertainment: Music,hard,What was the name of the hip hop group Kanye West was a member of in the late 90s?,The Beat-Busters,The Jumpers,The Kickstarters,The Go-Getters,D
+133,Entertainment: Video Games,hard,"In Call Of Duty: Zombies, which map's opening cutscene shows Richtofen killing another version of himself?",The Giant,Shadows Of Evil,Der Eisendrache,Moon,A
+134,History,hard,What was the name of the German offensive operation in October 1941 to take Moscow before winter?,Operation Sunflower,Operation Typhoon,Operation Barbarossa,Case Blue,B
+135,Entertainment: Film,hard,In what year does Jurassic World open in the Jurassic Park universe?,2015,2007,2005,2020,C
+136,Entertainment: Film,hard,"Which actors made up the trio in The Good, the Bad, and the Ugly? ","Aldo Giuffrè, Mario Brega, and Luigi Pistilli","Sergio Leone, Ennio Morricone, and Tonino Delli Colli","Yul Brynner, Steve McQueen, and Charles Bronson","Clint Eastwood, Eli Wallach, and Lee Van Cleef",D
+137,Geography,hard,What is the capital city of Bermuda?,Hamilton,Santo Dominigo,San Juan,Havana,A
+138,Entertainment: Books,hard,"In Margaret Atwood's The Handmaid's Tale, what is Offred's real name is implied to be?",August,June,April,May,B
+139,Entertainment: Video Games,hard,"In Guild Wars 2, which Chinese Zodiac sign is not represented in the Zodiac Weapon Set?",Tiger,Rabbit,Ox,Goat,C
+140,Entertainment: Video Games,hard,"In World of Warcraft, which raid instance features a chess event?",Temple of Ahn'Qiraj,Zul'Aman,Blackwing Lair,Karazhan,D
+141,Entertainment: Video Games,hard,"In Guild Wars 2, what is the first name of Kasmeer Meade's brother?",Kyle,Dave,Kevin,Ken,A
+142,Entertainment: Books,hard,"In the Magic: The Gathering universe, the Fallen Empires expansion takes place on which continent?",Otaria,Sarpadia,Terisiare,Shiv,B
+143,Entertainment: Video Games,hard,"In Guild Wars 2, what is the name of the elder dragon which is fought once all lanes have been cleared in the Dragon's Stand zone?",Fang of Mordremoth,Wing of Mordremoth,Mouth of Mordremoth,Claw of Mordremoth,C
+144,Entertainment: Video Games,hard,"In Guild Wars 2, which jumping puzzle rewards players with a Rich Silver Vein instead of a chest at the end?",Coddler's Cove,Branded Mine,Pig Iron Quarry,Grendich Gamble,D
+145,Entertainment: Video Games,hard,"In Guild Wars 2, what is the name of the legendary golden lightning sword with dragons twisting up the blade?",Bolt,Kudzu,Twilight,Astralaria,A
+146,Entertainment: Video Games,hard,"In Guild Wars 2, what is the name of the legendary green longbow covered in flowers?",Quip,Kudzu,The Dreamer,Nevermore,B
+147,Entertainment: Video Games,hard,"In Guild Wars 2, what is the name of the legendary mace with a disco ball as its head?",Quip,The Predator,The Moot,The Dreamer,C
+148,Entertainment: Comics,hard,"In 1978, Superman teamed up with what celebrity, to defeat an alien invasion?",Arnold Schwarzenegger,Mike Tyson,Sylvester Stallone,Muhammad Ali,D
+149,Science & Nature,hard,Which of the following is the term for surgical complications resulting from surgical sponges left inside the patient's body?,Gossypiboma,Gongoozler,Jentacular,Meupareunia,A

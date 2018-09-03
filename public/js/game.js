@@ -92,60 +92,6 @@ $(document).ready(function () {
     run();
   }
 
-
-
-
-
-  // -----------------------------------------------------------------------------------------
-
-  // on chosen answer click
-  var roundNumber = 0;
-  //this questions variable will be an array of objects
-  var questions = require("../../data/questions");
-
-  var randomizeAnswerOptions = function (question) {
-    var A = "";
-    var B = "";
-    var C = "";
-    var D = "";
-    var indexes = [];
-    var answerArrayUnordered = [];
-    answerArrayUnordered.push(question.correctAnswer);
-    answerArrayUnordered.push(question.incorrect1);
-    answerArrayUnordered.push(question.incorrect2);
-    answerArrayUnordered.push(question.incorrect3);
-
-    while (indexes.length < 4) {
-      var randomizedAnswer = Math.floor(Math.random() * answerArray.length);
-      // console.log(indexes.length);
-      if (indexes.indexOf(randomizedAnswer) === -1) {
-        indexes.push(randomizedAnswer);
-      }
-    }
-    A = answerArrayUnordered[indexes[0]];
-    B = answerArrayUnordered[indexes[1]];
-    C = answerArrayUnordered[indexes[2]];
-    D = answerArrayUnordered[indexes[3]];
-    answerArray.push(A, B, C, D);
-  };
-
-  for (roundNumber = 0; roundNumber < 14; roundNumber++) {
-    var question = questions[roundNumber];
-    randomizeAnswerOptions(question);
-
-    $(".answer").on("click", function () {
-      //this just returns the letter that was clicked on, A, B, C, D
-      var chosenAnswer = $(this).attr("data-correct");
-      var correctAnswer = questions[roundNumber].correctAnswer;
-      if (chosenAnswer === correctAnswer) {
-        //do stuff
-      } else {
-        //do other stuff
-      }
-    });
-  }
-
-
 });
 
 
