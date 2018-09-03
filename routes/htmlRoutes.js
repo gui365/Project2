@@ -19,13 +19,13 @@ module.exports = function (app) {
     res.render("signup");
   });
 
-  app.get("/board",
-    // ensureLogin.ensureLoggedIn("/login"),
-    function (req, res) {
-      res.render("board", {
-        // username: req.user.username
-      });
-    });
+  app.get("/board", function(req, res){
+    var hbsObject = {
+      questions: questions
+    };
+    console.log(hbsObject.questions);
+    res.render("board", hbsObject);
+  });
   
 
   app.get("/controller",
@@ -75,11 +75,5 @@ module.exports = function (app) {
     res.render("404");
   });
 
-  app.get("/board", function(req, res){
-    var hbsObject = {
-      questions: questions
-    };
-    console.log(hbsObject.questions);
-    res.render("board", hbsObject);
-  });
+
 };
