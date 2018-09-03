@@ -56,10 +56,11 @@ function populateQuestions(results) {
     var question = {};
     question.difficulty = results[i].difficulty;
     question.question = results[i].question;
-    question.correct = results[i].correct_answer;
-    question.incorrect1 = results[i].incorrect0;
-    question.incorrect2 = results[i].incorrect1;
-    question.incorrect3 = results[i].incorrect2;
+    question.A = results[i].optionA;
+    question.B = results[i].optionB;
+    question.C = results[i].optionC;
+    question.D = results[i].optionD;
+    question.correct = results[i].correct;
     questions.push(question);
   }
   if (questions.length === 13) {
