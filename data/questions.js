@@ -10,7 +10,7 @@ if (process.env.JAWSDB_URL) {
     host: "localhost",
     port: 8889,
     user: "root",
-    password: "Pa@19144",
+    password: "root",
     database: "trivia_db"
   });
 } 
