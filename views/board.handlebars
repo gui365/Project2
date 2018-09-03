@@ -6,8 +6,13 @@
 
   <div id="questions">
     {{#each questions}}
-      <p>Question: {{this.question}}</p>
-      <p>Choices: {{this.A}}, {{this.B}}, {{this.C}}, {{this.D}}</p>
+      <div class="no-show" id={{@index}} data-correct={{this.correct}}>
+        <p id="question">{{this.question}}</p>
+        <p class="choices">A. {{this.A}}</p>
+        <p class="choices">B. {{this.B}}</p>
+        <p class="choices">C. {{this.C}}</p>
+        <p class="choices">D. {{this.D}}</p>
+      </div>
     {{/each}}
   </div>
 
