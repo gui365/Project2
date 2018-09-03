@@ -1,4 +1,5 @@
 var ensureLogin = require("connect-ensure-login");
+var questions = require("../data/questions");
 
 module.exports = function (app) {
   
@@ -25,6 +26,7 @@ module.exports = function (app) {
         // username: req.user.username
       });
     });
+  
 
   app.get("/controller",
     ensureLogin.ensureLoggedIn("/login"),
@@ -71,5 +73,13 @@ module.exports = function (app) {
   // Render 404 page for any unmatched routes
   app.get("*", function (req, res) {
     res.render("404");
+  });
+
+  app.get("/board", function(req, res){
+    var hbsObject = {
+      questions: questions
+    };
+    console.log(hbsObject.questions);
+    res.render("board", hbsObject);
   });
 };

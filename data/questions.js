@@ -63,10 +63,9 @@ function populateQuestions(results) {
     questions.push(question);
   }
   if (questions.length === 13) {
-    console.log(questions);
     connection.end();
   }
 }
 
 module.exports = questions;
-module.exports = connection;
+// module.exports = connection;
