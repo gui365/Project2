@@ -4,6 +4,14 @@
 
 <body class="d-flex align-items-center">
 
+  <div id="questions">
+    {{#each questions}}
+      <p>Question: {{this.question}}</p>
+      <p>Choices: {{this.correct}}, {{this.incorrect1}}, {{this.incorrect2}}, {{this.incorrect3}}</p>
+    {{/each}}
+  </div>
+
+
   <main class="position-relative">
     <div class="predator position-absolute d-flex flex-wrap flex-column text-center">
       <img id="predator-img" src="" alt="predator image">
@@ -62,7 +70,6 @@
         </div>
       </div>
     </div>
-    
 
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
