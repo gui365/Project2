@@ -26,7 +26,7 @@ $(document).ready(function () {
   $("#p3-name").text(currentGame.p3Username);
 
   // Trigger question modal pop-up
-  // $("#modal-question").click();
+  $("#modal-question").click();
 
   // Start a 5 seconds timer before displaying the first question
   // Activate the modal
@@ -81,13 +81,13 @@ $(document).ready(function () {
     if (t < 10) {
       seconds = "0" + t;
     }
-    return "00:00:" + seconds;
+    return seconds;
   }
 
   function reset() {
     timer = 15;
-    document.getElementById("timer").innerHTML = "00:00:15";
-    $("#question").empty();
+    $("#timer").html("15");
+    $("#questions").empty();
     $("#choices").empty();
     run();
   }
