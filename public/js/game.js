@@ -1,16 +1,11 @@
 var sessionCode = localStorage.getItem("sessionCode");
 var currentGame = JSON.parse(localStorage.getItem("currentGame"))[sessionCode];
-var initialCountdown = 6;
 var questionNumber = 0;
 // This variable will unable the players to choose an answer when there's no question displayed
 var answerNow = false;
 // This variable will be set to true when all players have answered
 var allPlayersAnswered = false;
 // If this var is true it will reset all players' choices in Firebase to ""
-var resetChoices = false;
-// This variable will determine if a player moves forward on not
-var moveForward = false;
-var correctAnswer = $("#" + questionNumber).attr("data-correct");
 
 //who signed in from firebase (need the user object info)
 //need to toggle the dashboard div to show the question and then the players/correct answers
@@ -38,108 +33,142 @@ $(document).ready(function () {
   
   // Start a 5 seconds timer before displaying the first question
   // Activate the modal
-  $("#initial-countdown").click();
-  var startGame = setInterval(function () {
-    if (initialCountdown === 1) {
-      // Stop the timer
-      clearInterval(startGame);
-      // Close the modal
-      $(".close-modal").click();
-      // Trigger question modal pop-up
-      answerNow = true;
-      resetChoices = false;
+  function generateQuestion() {
+    database.ref().child(localStorage.getItem("sessionCode")).update({
+      p1Choice: "",
+      p2Choice: "",
+      p3Choice: ""
+    });
+    $("#question-number").text(questionNumber+1)
+    var correctAnswer = $("#" + questionNumber).attr("data-correct");
+    console.log("correct: " + correctAnswer);
+    
+    var initialCountdown = 6;
+      $("#initial-countdown").click();
+      
+    var startGame = setInterval(function () {
+      if (initialCountdown === 1) {
+        // Stop the timer
+        clearInterval(startGame);
+        // Close the modal
+        $(".close-modal").click();
+        // Trigger question modal pop-up
+        answerNow = true;
+        $("#" + questionNumber).toggleClass("no-show");
+        $("#modal-question").click();
+        initialCountdown = 6;
+        reset();
+      }
+      
+      initialCountdown--;
+      $("#countdown").text(initialCountdown);
+      
+    }, 1000);
+    
+    var timer = 15;
+    var intervalID;
+    var clockRunning = false;
+    
+    function run() {
+      if (!clockRunning) {
+        intervalID = setInterval(decrement, 1000);
+        clockRunning = true;
+        
+      }
+    }
+    
+    function decrement() {
+      timer--;
+      var ticktock = timeConverter(timer);
+      $("#timer").html(ticktock);
+      if (timer === 0) {
+        stop();
+      }
+      // If all players have answered, stop the clock and show the correct response
+      if (allPlayersAnswered) {
+        stop();
+        // Select the correct choice and change its CSS
+        $("." + correctAnswer).toggleClass("correct");
+        
+        // Controller will play sound
+        var choice = "p" + localStorage.getItem("playerNumber") + "Choice";
+        if (!boardScreen) {
+          if (currentGame[sessionCode][choice] === correctAnswer) {
+            var audio = new Audio("/sounds/answer_correct.mp3");
+            audio.play();
+            // console.log("Sound played (correct)");
+            
+          } else {
+            var audio = new Audio("/sounds/answer_wrong.mp3");
+            audio.play();
+            // console.log("Sound played (incorrect)");
+          }
+        }
+        
+        // Show correct answer on board screen
+        if (localStorage.getItem("boardScreen")) {
+          // Change the CSS back to what is was and close the question modal after 5 seconds
+          setTimeout(function() {
+            $("." + correctAnswer).toggleClass("correct");
+            $(".close-modal-question").click();
+            animateAvatars();
+          }, 5000);
+          // console.log("SCREEN");
+        }
+      }
+    }
+
+    function stop() {
+      clearInterval(intervalID);
+      clockRunning = false;
+    }
+    
+    function timeConverter(t) {
+      var seconds = t;
+      if (t < 10) {
+        seconds = t;
+      }
+      return seconds;
+    }
+    
+    function reset() {
+      timer = 150;
+      $("#timer").text(timer);
+      run();
+    }
+    
+    // Moving the avatars
+    function animateAvatars() {
+      for (let i = 1; i < 4; i++) {
+        var playerChoice = "p" + i + "Choice";
+        if (currentGame[sessionCode][playerChoice] === correctAnswer) {
+          var playerAvatar = $(".player" + i);
+          // Move it forward
+          playerAvatar.animate({
+            left: "+=8vw"
+          }, 1000);
+          console.log("p" + i + " correct");
+        }
+      }
+      
+      resetQuestion();
+
+    }
+
+    function resetQuestion() {
       $("#" + questionNumber).toggleClass("no-show");
-      $("#modal-question").click();
-      reset();
-    }
-
-    initialCountdown--;
-    $("#countdown").text(initialCountdown);
-
-  }, 1000);
-
-  var timer = 15;
-  var intervalID;
-  var clockRunning = false;
-
-  function run() {
-    if (!clockRunning) {
-      intervalID = setInterval(decrement, 1000);
-      clockRunning = true;
+      questionNumber++;
+      console.log(questionNumber);
+      // Reset all variables
+      moveForward = false;
+      allPlayersAnswered = false;
+      answerNow = false;
       
+      generateQuestion();
     }
-  }
+  };
 
-  function decrement() {
-    timer--;
-    var ticktock = timeConverter(timer);
-    $("#timer").html(ticktock);
-    if (timer === 0) {
-      stop();
-    }
-    // If all players have answered, stop the clock and show the correct response
-    if (allPlayersAnswered) {
-      stop();
-      // Select the correct choice and change its CSS
-      $("#" + correctAnswer).toggleClass("correct");
-      
-      // PLAY CORRESPONDING SOUND ON CONTROLLER.HANDLEBARS ACCORDINGLY
-      if (localStorage.getItem("boardScreen")) {
-        // Change the CSS back to what is was and close the question modal after 5 seconds
-        setTimeout(function() {
-          $("#" + correctAnswer).toggleClass("correct");
-          $(".close-modal-question").click();
-          animateAvatars();
-        }, 5000);
-        // console.log("SCREEN");
-      }
-    }
-  }
-
-  function stop() {
-    clearInterval(intervalID);
-    clockRunning = false;
-  }
-
-  function timeConverter(t) {
-    var seconds = t;
-    if (t < 10) {
-      seconds = t;
-    }
-    return seconds;
-  }
-
-  function reset() {
-    timer = 150;
-    $("#timer").text(timer);
-    run();
-  }
-
-  // Moving the avatars
-  function animateAvatars() {
-    for (let i = 1; i < 4; i++) {
-      var playerChoice = "p" + i + "Choice";
-      if (currentGame[sessionCode][playerChoice] === correctAnswer) {
-        var playerAvatar = $(".player" + i);
-        // Move it forward
-        playerAvatar.animate({
-          left: "+8vw"
-        }, 1000);
-        
-        console.log("p" + i + " correct");
-        
-      } else {
-        console.log("p" + i + " incorrect");
-        
-      }
-    }
-      
-    // Reset all variables
-    moveForward = false;
-    allPlayersAnswered = false;
-    answerNow = false;
-    resetChoices = true;
-  }
+  generateQuestion();
 
 });
 
