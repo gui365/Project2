@@ -67,6 +67,7 @@ function renderBoard() {
     if (p1Avatar !== "" && p2Avatar !== "" & p3Avatar !== "") {
       window.location.href = "/board";
       boardRendered = true;
+      localStorage.setItem("boardScreen", "true");
     }
     
   } else {
@@ -117,6 +118,7 @@ $(document).ready(function(){
         p2Choice: "",
         p3Choice: ""
       });
+      resetChoices = false;
     }
   }, function(errorObject) {
     // If any errors are experienced, log them to console.
@@ -194,13 +196,13 @@ $(document).ready(function(){
   $(".option").click(function() {
     var keyToUpdate = "p" + localStorage.getItem("playerNumber") + "Choice";
     // SET answerNow to true when the question appears in board. Set it to false when time runs out or all pChoice(s) have been recorded
-    // if (answerNow) {
+    if (answerNow) {
       var answer = $(this).attr("data-option");
       localStorage.setItem("answer", answer);
       database.ref().child(localStorage.getItem("sessionCode")).update({
         [keyToUpdate]: answer
       })
-    // }
+    }
 
   });
 });

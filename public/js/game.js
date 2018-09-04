@@ -10,6 +10,7 @@ var allPlayersAnswered = false;
 var resetChoices = false;
 // This variable will determine if a player moves forward on not
 var moveForward = false;
+var correctAnswer = $("#" + questionNumber).attr("data-correct");
 
 //who signed in from firebase (need the user object info)
 //need to toggle the dashboard div to show the question and then the players/correct answers
@@ -45,6 +46,8 @@ $(document).ready(function () {
       // Close the modal
       $(".close-modal").click();
       // Trigger question modal pop-up
+      answerNow = true;
+      resetChoices = false;
       $("#" + questionNumber).toggleClass("no-show");
       $("#modal-question").click();
       reset();
@@ -74,6 +77,23 @@ $(document).ready(function () {
     if (timer === 0) {
       stop();
     }
+    // If all players have answered, stop the clock and show the correct response
+    if (allPlayersAnswered) {
+      stop();
+      // Select the correct choice and change its CSS
+      $("#" + correctAnswer).toggleClass("correct");
+      
+      // PLAY CORRESPONDING SOUND ON CONTROLLER.HANDLEBARS ACCORDINGLY
+      if (localStorage.getItem("boardScreen")) {
+        // Change the CSS back to what is was and close the question modal after 5 seconds
+        setTimeout(function() {
+          $("#" + correctAnswer).toggleClass("correct");
+          $(".close-modal-question").click();
+          animateAvatars();
+        }, 5000);
+        // console.log("SCREEN");
+      }
+    }
   }
 
   function stop() {
@@ -90,13 +110,35 @@ $(document).ready(function () {
   }
 
   function reset() {
-    timer = 15;
-    $("#timer").html("15");
+    timer = 150;
+    $("#timer").text(timer);
     run();
   }
 
-  // COMPARING PLAYERS' ANSWERS TO CORRECT ANSWER
-
+  // Moving the avatars
+  function animateAvatars() {
+    for (let i = 1; i < 4; i++) {
+      var playerChoice = "p" + i + "Choice";
+      if (currentGame[sessionCode][playerChoice] === correctAnswer) {
+        // var playerAvatar = $("#p" + i + "-img");
+        // // Move it forward
+        // playerAvatar.animate({
+        //   left: "+10%"
+        // }, 700);
+        console.log("p" + i + " correct");
+        
+      } else {
+        console.log("p" + i + " incorrect");
+        
+      }
+    }
+      
+    // Reset all variables
+    moveForward = false;
+    allPlayersAnswered = false;
+    answerNow = false;
+    resetChoices = true;
+  }
 
 });
 
