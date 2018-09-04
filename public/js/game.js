@@ -120,11 +120,12 @@ $(document).ready(function () {
     for (let i = 1; i < 4; i++) {
       var playerChoice = "p" + i + "Choice";
       if (currentGame[sessionCode][playerChoice] === correctAnswer) {
-        // var playerAvatar = $("#p" + i + "-img");
-        // // Move it forward
-        // playerAvatar.animate({
-        //   left: "+10%"
-        // }, 700);
+        var playerAvatar = $(".player" + i);
+        // Move it forward
+        playerAvatar.animate({
+          left: "+8vw"
+        }, 1000);
+        
         console.log("p" + i + " correct");
         
       } else {
