@@ -91,3 +91,8 @@ main p {
 .modal-content {
   background: none;
 }
+
+.correct {
+  background-color: rgba(0, 128, 0, 0.8);
+  border-radius: 20px;
+}

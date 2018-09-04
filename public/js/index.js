@@ -102,8 +102,24 @@ $(document).ready(function(){
     // Run the renderBoard function to check if all players have been logged in
     // If so, render the board only on the "boardScreen = true" device (the one that created the session)
     renderBoard();
-    // If any errors are experienced, log them to console.
+
+    var p1Choice = currentGame[sessionCode].p1Choice;
+    var p2Choice = currentGame[sessionCode].p2Choice;
+    var p3Choice = currentGame[sessionCode].p3Choice;
+    // Listen for players' answers when there is a question
+    if (answerNow && p1Choice !== "" && p2Choice !== "" && p3Choice !== "") {
+      allPlayersAnswered = true;
+    }
+
+    if (resetChoices) {
+      database.ref().child(localStorage.getItem("sessionCode")).update({
+        p1Choice: "",
+        p2Choice: "",
+        p3Choice: ""
+      });
+    }
   }, function(errorObject) {
+    // If any errors are experienced, log them to console.
     console.log("The read failed: " + errorObject.code);
   });
 
@@ -174,4 +190,17 @@ $(document).ready(function(){
   // LOGIC FOR CONTROLLER
   $(".player-img").attr("src", "/images/" + localStorage.getItem("playerAvatar"));
   $(".player-name").text(localStorage.getItem("userName"));
+
+  $(".option").click(function() {
+    var keyToUpdate = "p" + localStorage.getItem("playerNumber") + "Choice";
+    // SET answerNow to true when the question appears in board. Set it to false when time runs out or all pChoice(s) have been recorded
+    // if (answerNow) {
+      var answer = $(this).attr("data-option");
+      localStorage.setItem("answer", answer);
+      database.ref().child(localStorage.getItem("sessionCode")).update({
+        [keyToUpdate]: answer
+      })
+    // }
+
+  });
 });
