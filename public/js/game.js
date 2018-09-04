@@ -1,6 +1,15 @@
 var sessionCode = localStorage.getItem("sessionCode");
 var currentGame = JSON.parse(localStorage.getItem("currentGame"))[sessionCode];
 var initialCountdown = 6;
+var questionNumber = 0;
+// This variable will unable the players to choose an answer when there's no question displayed
+var answerNow = false;
+// This variable will be set to true when all players have answered
+var allPlayersAnswered = false;
+// If this var is true it will reset all players' choices in Firebase to ""
+var resetChoices = false;
+// This variable will determine if a player moves forward on not
+var moveForward = false;
 
 //who signed in from firebase (need the user object info)
 //need to toggle the dashboard div to show the question and then the players/correct answers
@@ -25,9 +34,7 @@ $(document).ready(function () {
   $("#p2-name").text(currentGame.p2Username);
   $("#p3-name").text(currentGame.p3Username);
 
-  // Trigger question modal pop-up
-  $("#modal-question").click();
-
+  
   // Start a 5 seconds timer before displaying the first question
   // Activate the modal
   $("#initial-countdown").click();
@@ -37,6 +44,9 @@ $(document).ready(function () {
       clearInterval(startGame);
       // Close the modal
       $(".close-modal").click();
+      // Trigger question modal pop-up
+      $("#" + questionNumber).toggleClass("no-show");
+      $("#modal-question").click();
       reset();
     }
 
@@ -46,19 +56,14 @@ $(document).ready(function () {
   }, 1000);
 
   var timer = 15;
-  var answerArray = [];
   var intervalID;
   var clockRunning = false;
 
-
   function run() {
     if (!clockRunning) {
-      intervalID = setInterval(decrement, 1500);
-      document.getElementById("question").innerHTML = questionBeingAsked;
-      answerArray.forEach(function (answer) {
-        answerButtons = $("#choices").append("<button class=choice data-correct=" + answer + ">" + answer + "</button>");
-      });
+      intervalID = setInterval(decrement, 1000);
       clockRunning = true;
+      
     }
   }
 
@@ -79,7 +84,7 @@ $(document).ready(function () {
   function timeConverter(t) {
     var seconds = t;
     if (t < 10) {
-      seconds = "0" + t;
+      seconds = t;
     }
     return seconds;
   }
@@ -87,10 +92,11 @@ $(document).ready(function () {
   function reset() {
     timer = 15;
     $("#timer").html("15");
-    $("#questions").empty();
-    $("#choices").empty();
     run();
   }
+
+  // COMPARING PLAYERS' ANSWERS TO CORRECT ANSWER
+
 
 });
 
