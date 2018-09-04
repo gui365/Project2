@@ -62,3 +62,18 @@ header .mock-a:hover {
 header .mock-a {
   font-weight: 700;
 }
+
+.logo-index-mobile {
+  display: none;
+  width: 80vw;
+}
+
+@media screen and (max-width: 450px) {
+  .logo-index, .intro-text {
+    display: none;
+  }
+
+  .logo-index-mobile {
+    display: block;
+  }
+}

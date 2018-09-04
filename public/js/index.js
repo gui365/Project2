@@ -111,15 +111,6 @@ $(document).ready(function(){
     if (answerNow && p1Choice !== "" && p2Choice !== "" && p3Choice !== "") {
       allPlayersAnswered = true;
     }
-
-    if (resetChoices) {
-      database.ref().child(localStorage.getItem("sessionCode")).update({
-        p1Choice: "",
-        p2Choice: "",
-        p3Choice: ""
-      });
-      resetChoices = false;
-    }
   }, function(errorObject) {
     // If any errors are experienced, log them to console.
     console.log("The read failed: " + errorObject.code);
