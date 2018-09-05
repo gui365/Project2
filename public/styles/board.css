@@ -62,13 +62,51 @@ main img {
   width: 7vw;
 }
 
+header {
+  height: 10vh;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.safe {
+  background-color: rgba(0, 255, 149, 0.3);
+}
+
+.prey {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+.console {
+  width: 50vw;
+  text-align: center;
+  padding-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 main p {
   font-size: 100%;
   line-height: 1.2;
 }
 
+.cabin {
+  left: 90vw;
+}
+
+.predator {
+  left: 0;
+}
+
 .players {
-  left: 8vw;
+  left: 10vw;
 }
 
 .player1 {

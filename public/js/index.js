@@ -25,8 +25,6 @@ var currentGame;
 var userName;
 // Initial structure sent to Firebase when the session is created
 var gameStructure = {
-  questionNumber: 0,
-  correctAnswer: "",
   predatorAvatar: "",
   predatorName: "",
   p1Choice: "",
