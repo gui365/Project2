@@ -27,17 +27,24 @@ $(document).ready(function () {
   // Start a 5 seconds timer before displaying the first question
   // Activate the modal
   function generateQuestion() {
+    console.log("Question: " + questionNumber);
+    
     database.ref().child(localStorage.getItem("sessionCode")).update({
+      questionNumber: questionNumber,
       p1Choice: "",
       p2Choice: "",
       p3Choice: ""
     });
+
     $("#question-number").text(questionNumber+1)
     var correctAnswer = $("#" + questionNumber).attr("data-correct");
     console.log("correct: " + correctAnswer);
     
     var initialCountdown = 6;
+
+    if (questionNumber === 0) {
       $("#initial-countdown").click();
+    };
       
     var startGame = setInterval(function () {
       if (initialCountdown === 1) {
@@ -76,6 +83,8 @@ $(document).ready(function () {
       $("#timer").html(ticktock);
       if (timer === 0) {
         stop();
+        allPlayersAnswered = true;
+        
       }
       // If all players have answered, stop the clock and show the correct response
       if (allPlayersAnswered) {
@@ -85,7 +94,7 @@ $(document).ready(function () {
         
         // Controller will play sound
         var choice = "p" + localStorage.getItem("playerNumber") + "Choice";
-        if (!boardScreen) {
+        if (!localStorage.getItem("boardScreen")) {
           if (currentGame[sessionCode][choice] === correctAnswer) {
             var audio = new Audio("/sounds/answer_correct.mp3");
             audio.play();
@@ -96,8 +105,6 @@ $(document).ready(function () {
             audio.play();
             // console.log("Played sound: (incorrect)");
           }
-        } else {
-          return;
         }
         
         // Show correct answer on board screen
@@ -127,13 +134,15 @@ $(document).ready(function () {
     }
     
     function reset() {
-      timer = 150;
+      timer = 15;
       $("#timer").text(timer);
       run();
     }
     
     // Moving the avatars
     function animateAvatars() {
+      checkWinLose();
+
       for (let i = 1; i < 4; i++) {
         var playerChoice = "p" + i + "Choice";
         if (currentGame[sessionCode][playerChoice] === correctAnswer) {
@@ -150,17 +159,17 @@ $(document).ready(function () {
           console.log("p" + i + " correct");
         }
       }
-
+      
+      
       if (questionNumber > 1) {
-        var random = Math.floor(Math.random() * 4);
+        var random = Math.floor(Math.random() * 5);
         if (random !== 1) {
           $(".predator").animate({
             left: "+=10vw"
           }, 1000);
         }
       }
-
-      checkWinLose();
+      
       resetQuestion();
     }
 
@@ -170,16 +179,21 @@ $(document).ready(function () {
         var pPosition = $(".player" + i).attr("style");
         console.log(i + ": " + pPosition);
         
-
-        if ($(".player" + i).attr("style") === "left: 10vw;") {
-          if (boardScreen) {
-            $(".player" + i).empty();
-          } else {
-            setTimeout(() => {
-              window.location("/dashboard")
-            }, 3000);
+        console.log($(".player" + i).css("left"));
+        
+        if ($(".player" + i).attr("style") === "left: 80vw;") {
+          if (localStorage.getItem("boardScreen")) {
+            $(".safe").append("<p>" + currentGame[sessionCode]["p" + i + "Username"] + "</p>");
+            $(".player" + i).remove();
           }
         }
+
+        // if ($(".player" + i).attr("style") === $(".predator").attr("style")) {
+        //   if (localStorage.getItem("boardScreen")) {
+        //     $(".prey").append("<p>" + currentGame[sessionCode]["p" + i + "Username"] + "</p>");
+        //     $(".player" + i).remove();
+        //   }
+        // }
       }
     }
 
@@ -188,7 +202,6 @@ $(document).ready(function () {
       questionNumber++;
       console.log(questionNumber);
       // Reset all variables
-      moveForward = false;
       allPlayersAnswered = false;
       answerNow = false;
       
