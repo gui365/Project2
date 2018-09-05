@@ -67,6 +67,18 @@ main p {
   line-height: 1.2;
 }
 
+.cabin {
+  left: 90vw;
+}
+
+.predator {
+  left: 0;
+}
+
+.players {
+  left: 10vw;
+}
+
 .players {
   left: 8vw;
 }

@@ -5,14 +5,7 @@ var questionNumber = 0;
 var answerNow = false;
 // This variable will be set to true when all players have answered
 var allPlayersAnswered = false;
-// If this var is true it will reset all players' choices in Firebase to ""
 
-//who signed in from firebase (need the user object info)
-//need to toggle the dashboard div to show the question and then the players/correct answers
-
-// answer A on the screen equals 1st answer from the question array (randomize the answers)
-//display the player stats/correct answers after the setTimeout completes (15 sec)
-// Note: need to add timer div probably
 $(document).ready(function () {
   // --------------------------------------------------------------
   // --------- GENERATE CHARACTERS AND LOGIC FOR MOVEMENT ---------
@@ -96,13 +89,15 @@ $(document).ready(function () {
           if (currentGame[sessionCode][choice] === correctAnswer) {
             var audio = new Audio("/sounds/answer_correct.mp3");
             audio.play();
-            // console.log("Sound played (correct)");
+            // console.log("Played sound: (correct)");
             
           } else {
             var audio = new Audio("/sounds/answer_wrong.mp3");
             audio.play();
-            // console.log("Sound played (incorrect)");
+            // console.log("Played sound: (incorrect)");
           }
+        } else {
+          return;
         }
         
         // Show correct answer on board screen
@@ -143,16 +138,49 @@ $(document).ready(function () {
         var playerChoice = "p" + i + "Choice";
         if (currentGame[sessionCode][playerChoice] === correctAnswer) {
           var playerAvatar = $(".player" + i);
+
+          // Record the numbe rof right answers under the data-correct attribute
+          var numberCorrect = $(".player" + i).attr("data-correct");
+          $(".player" + i).attr("data-correct", parseInt(numberCorrect) + 1)
+
           // Move it forward
           playerAvatar.animate({
-            left: "+=8vw"
+            left: "+=10vw"
           }, 1000);
           console.log("p" + i + " correct");
         }
       }
-      
-      resetQuestion();
 
+      if (questionNumber > 1) {
+        var random = Math.floor(Math.random() * 4);
+        if (random !== 1) {
+          $(".predator").animate({
+            left: "+=10vw"
+          }, 1000);
+        }
+      }
+
+      checkWinLose();
+      resetQuestion();
+    }
+
+    // WORK ON THIS FUNCTION NEXT - 9/4/18 9:55 PM
+    function checkWinLose() {
+      for (let i = 1; i < 4; i++) {
+        var pPosition = $(".player" + i).attr("style");
+        console.log(i + ": " + pPosition);
+        
+
+        if ($(".player" + i).attr("style") === "left: 10vw;") {
+          if (boardScreen) {
+            $(".player" + i).empty();
+          } else {
+            setTimeout(() => {
+              window.location("/dashboard")
+            }, 3000);
+          }
+        }
+      }
     }
 
     function resetQuestion() {
@@ -189,3 +217,10 @@ $(document).ready(function () {
 // Update user object with win++ or death++ -----> maybe a future implementation
 // If they all died - some sort of visualization of the bear turning into an alien - Anh
 // Display the above with a timer before ending the connection and showing the home screen again
+
+//who signed in from firebase (need the user object info)
+//need to toggle the dashboard div to show the question and then the players/correct answers
+
+// answer A on the screen equals 1st answer from the question array (randomize the answers)
+//display the player stats/correct answers after the setTimeout completes (15 sec)
+// Note: need to add timer div probably
