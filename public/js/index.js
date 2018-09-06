@@ -79,6 +79,7 @@ function renderBoard() {
 $(document).ready(function(){
   $(".create-button").click(function(){
     event.preventDefault();
+    localStorage.clear();
     // Run the function to generate a code
     sessionCode = generateCode();
 

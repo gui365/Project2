@@ -5,6 +5,7 @@ var questionNumber = 0;
 var answerNow = false;
 // This variable will be set to true when all players have answered
 var allPlayersAnswered = false;
+var finish = false;
 
 $(document).ready(function () {
   // --------------------------------------------------------------
@@ -153,8 +154,8 @@ $(document).ready(function () {
           // Move it forward
           playerAvatar.animate({
             left: "+=10vw"
-          }, 1000);
-          console.log("p" + i + " correct");
+          }, 2000);
+          // console.log("p" + i + " correct");
         }
       }
       
@@ -168,8 +169,10 @@ $(document).ready(function () {
         }
       }
       
-      checkWinLose();
-      resetQuestion();
+      setTimeout(() => {
+        checkWinLose();
+        resetQuestion();
+      }, 2200);
     }
 
     // WORK ON THIS FUNCTION NEXT - 9/4/18 9:55 PM
@@ -187,9 +190,11 @@ $(document).ready(function () {
             // Write name of player
             var avatarFile = currentGame[sessionCode]["p" + i + "Avatar"];
             var userFile = currentGame[sessionCode]["p" + i + "Username"];
-            $("#winners").append(`<div style="d-flex flex-wrap flex-column align-items-center justify-content-center"><img src=${avatarFile}><p>${userFile}</p></div>`)
+            $("#winners").append(`<div style="d-flex flex-wrap flex-column align-items-center justify-content-center"><img src="./images/${avatarFile}"><p>${userFile}</p></div>`)
             $("#winners-modal").click();
+            finish = true;
             setTimeout(() => {
+              database.ref().child(sessionCode).remove();
               window.location.href = "/dashboard";
             }, 5000);
           // On the controller screen...
@@ -209,9 +214,9 @@ $(document).ready(function () {
         }
       }
 
-      if ($(".player1").is(":hidden") && $(".player2").is(":hidden") && $(".player3").is(":hidden")) {
-        endGame();
-      }
+      // if ($(".player1").is(":hidden") && $(".player2").is(":hidden") && $(".player3").is(":hidden")) {
+      //   endGame();
+      // }
     }
 
     function resetQuestion() {
@@ -223,11 +228,17 @@ $(document).ready(function () {
       answerNow = false;
       
       // Stop the game after 13 questions if nobody won
-      if (questionNumber === 13) {
-        endGame();
+      // if (questionNumber === 14) {
+      //   endGame();
+      // } else {
+      if (finish) {
+        console.log("If True: " + finish);
+        return;
       } else {
+        console.log("If False: " + finish);
         generateQuestion();
       }
+      // }
     }
   };
 
