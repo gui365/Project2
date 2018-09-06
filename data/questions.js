@@ -7,7 +7,7 @@ if (process.env.JAWSDB_URL) {
 } else {
   connection = mysql.createConnection({
     host: "localhost",
-    port: 8889,
+    port: 3306,
     user: process.env.MYSQL_USER,
     password: process.env.MYSQL_PASSWRD,
     database: "trivia_db"

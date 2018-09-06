@@ -1,16 +1,3 @@
-// $(function () {
-//   $.ajax("/api/cats/" + id, {
-//   type: "PUT",
-//   data: newSleepState
-// }).then(
-//   function () {
-//     console.log("changed sleep to", newSleep);
-//     // Reload the page to get the updated list
-//     location.reload();
-//   }
-// );
-// });
-
 var config = {
   apiKey: "AIzaSyAVctAeThQ7WFsUui0Zdmf_2Mrr-8CoiNg",
   // apiKey: process.env.FIREBASE_API_KEY,
@@ -146,6 +133,7 @@ $(document).ready(function(){
       database.ref().child(sessionEnter + "/players").push(userName);
       playerNumber = Object.keys(currentGame[sessionEnter].players).length;
       localStorage.setItem("playerNumber", playerNumber);
+      localStorage.setItem("controller", true);
       // Push the username to Firebase
       database.ref().child(localStorage.getItem("sessionCode")).update({
         ["p" + playerNumber + "Username"]: userName
