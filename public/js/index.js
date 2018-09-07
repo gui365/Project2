@@ -80,6 +80,7 @@ $(document).ready(function(){
   $(".create-button").click(function(){
     event.preventDefault();
     localStorage.clear();
+    localStorage.setItem("sessionCode", sessionEnter);
     // Run the function to generate a code
     sessionCode = generateCode();
 
