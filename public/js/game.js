@@ -97,10 +97,10 @@ $(document).ready(function () {
         var choice = "p" + localStorage.getItem("playerNumber") + "Choice";
         if (localStorage.getItem("controller")) {
           if (currentGame[sessionCode][choice] === correctAnswer) {
-            $("#answer-correct").play();
+            document.getElementById("answer-correct").play();
             // console.log("Played sound: (correct)");
           } else {
-            $("#answer-wrong").play();
+            document.getElementById("answer-wrong").play();
             // console.log("Played sound: (incorrect)");
           }
         }
@@ -203,7 +203,7 @@ $(document).ready(function () {
             }, 5000);
           // On the controller screen...
           } else if (localStorage.getItem("controller")) {
-            $("#game-win").play();
+            document.getElementById("game-win").play();
           }
           // IF THE PLAYER GETS EATEN
         } else if ($(".player" + i).attr("data-position") === $(".predator").attr("data-position") && questionNumber > 1) {
@@ -217,7 +217,7 @@ $(document).ready(function () {
             }
             
           } else if (localStorage.getItem("controller")) {
-            $("#game-lose").play();
+            document.getElementById("game-lose").play();
           }
         }
       }
