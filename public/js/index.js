@@ -80,10 +80,10 @@ $(document).ready(function(){
   $(".create-button").click(function(){
     event.preventDefault();
     localStorage.clear();
-    localStorage.setItem("sessionCode", sessionEnter);
     // Run the function to generate a code
     sessionCode = generateCode();
-
+    
+    localStorage.setItem("sessionCode", sessionCode);
     // Display the code to the screen and set the game structure in Firebase for that session
     $(".session-code").text(sessionCode);
     database.ref("/" + sessionCode).set(gameStructure);
