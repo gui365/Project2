@@ -6,6 +6,10 @@ var answerNow = false;
 // This variable will be set to true when all players have answered
 var allPlayersAnswered = false;
 var finish = false;
+var audioCorrect = new Audio("/sounds/answer_correct.mp3");
+var audioWrong = new Audio("/sounds/answer_wrong.mp3");
+var audioWin = new Audio("/sounds/game_win.mp3");
+var audioLose = new Audio("/sounds/game_lose.mp3");
 
 $(document).ready(function () {
   // --------------------------------------------------------------
@@ -24,7 +28,6 @@ $(document).ready(function () {
   $("#p1-name").text(currentGame.p1Username);
   $("#p2-name").text(currentGame.p2Username);
   $("#p3-name").text(currentGame.p3Username);
-
   
   // Start a 5 seconds timer before displaying the first question
   // Activate the modal
@@ -98,12 +101,10 @@ $(document).ready(function () {
         var choice = "p" + localStorage.getItem("playerNumber") + "Choice";
         if (localStorage.getItem("controller")) {
           if (currentGame[sessionCode][choice] === correctAnswer) {
-            var audio = new Audio("/sounds/answer_correct.mp3");
-            audio.play();
+            audioCorrect.play();
             // console.log("Played sound: (correct)");
           } else {
-            var audio = new Audio("/sounds/answer_wrong.mp3");
-            audio.play();
+            audioWrong.play();
             // console.log("Played sound: (incorrect)");
           }
         }
@@ -206,12 +207,11 @@ $(document).ready(function () {
             }, 5000);
           // On the controller screen...
           } else if (localStorage.getItem("controller")) {
-            var audio = new Audio("/sounds/game_win.mp3");
-            audio.play();
+            audioWin.play();
           }
-        // IF THE PLAYER GETS EATEN
+          // IF THE PLAYER GETS EATEN
         } else if ($(".player" + i).attr("data-position") === $(".predator").attr("data-position") && questionNumber > 1) {
-
+          
           if (localStorage.getItem("boardScreen")) {
             $(".player" + i).hide();
             $(".player" + i).css("left", "-100vw;");
@@ -219,10 +219,9 @@ $(document).ready(function () {
             if ($(".player1").is(":hidden") && $(".player2").is(":hidden") && $(".player3").is(":hidden")) {
               endGame();
             }
-
+            
           } else if (localStorage.getItem("controller")) {
-            var audio = new Audio("/sounds/game_lose.mp3");
-            audio.play();
+            audioLose.play();
           }
         }
       }
