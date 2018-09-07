@@ -1,8 +1,6 @@
-# Project2
-
 # **Choose Your Predator**
 
-This project was developed as part of the Penn Coding Boot Camp.
+This was the second group project of the Penn Coding Boot Camp.
 
 ## Goal
 To create a multi-player trivia game in which players answer questions to move closer to safety while being chased by a predator of their choice. The goal is to build this game by leveraging relational database technology, specifically MYSQL and NPM helper package, Sequelize. 
