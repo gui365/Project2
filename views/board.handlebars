@@ -2,7 +2,7 @@
 </head>
 
 <body class="d-flex align-items-center flex-wrap">
-  <header class="position-absolute d-flex justify-content-center">
+  {{!-- <header class="position-absolute d-flex justify-content-center">
     <div class="row">
       <div class="col-6-md console safe">
         <h2>SAFE</h2>
@@ -11,11 +11,13 @@
         <h2>PREY</h2>
       </div>
     </div>
-  </header>
+  </header> --}}
   <main class="position-relative">
-    <div class="predator position-absolute d-flex flex-wrap flex-column text-center" data-position="">
-      <img id="predator-img" src="" alt="predator image">
-      <p id="predator-name"></p>
+    <div id="predator-div">
+      <div class="predator position-absolute d-flex flex-wrap flex-column text-center" data-position="">
+        <img id="predator-img" src="" alt="predator image">
+        <p id="predator-name"></p>
+      </div>
     </div>
     <div class="players position-relative">
       <div class="player player1 position-absolute text-center" data-correct="0" data-position="">
@@ -39,6 +41,8 @@
   
     <a style="display: none;" id="modal-question" data-toggle="modal" data-target=".question-modal"></a>
     <a style="display: none;" id="initial-countdown" data-toggle="modal" data-target=".initial-countdown"></a>
+    <a style="display: none;" id="game-over" data-toggle="modal" data-target=".game-over"></a>
+    <a style="display: none;" id="winners-modal" data-toggle="modal" data-target=".winners-modal"></a>
 
     <div class="modal fade question-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
       <div class="modal-question-dialog modal-dialog">
@@ -88,6 +92,32 @@
       </div>
     </div>
 
+    <div class="modal fade game-over" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="countdown-body modal-body d-flex d-wrap flex-column">
+            <h1 id="game-over">Game Over</h1>
+            <button style="display: none;" type="button" class="close-modal" data-dismiss="modal"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{!-- Modal for winners --}}
+    <div class="modal fade winners-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+      <div class="modal-question-dialog modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-question-body modal-body d-flex d-wrap flex-column text-center">
+            <h1>Congratulations! You survived!</h1>
+            <div id="winners">
+              
+            </div>            
+          </div>
+
+        </div>
+      </div>
+    </div>
 
   {{!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> --}}
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
