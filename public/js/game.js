@@ -148,14 +148,15 @@ $(document).ready(function () {
         if (currentGame[sessionCode][playerChoice] === correctAnswer) {
           var playerAvatar = $(".player" + i);
 
-          // Record the numbe rof right answers under the data-correct attribute
-          var numberCorrect = $(".player" + i).attr("data-correct");
-          $(".player" + i).attr("data-correct", parseInt(numberCorrect) + 1)
+          // Record the position under the data-position attribute
+          var numberPosition = $(".player" + i).attr("data-position");
+          $(".player" + i).attr("data-position", parseInt(numberPosition) + 1)
 
           // Move it forward
           playerAvatar.animate({
             left: "+=10vw"
           }, 2000);
+          
           // console.log("p" + i + " correct");
         }
       }
@@ -167,6 +168,8 @@ $(document).ready(function () {
           $(".predator").animate({
             left: "+=10vw"
           }, 1000);
+          var numberPosition = $(".predator").attr("data-position");
+          $(".predator").attr("data-position", parseInt(numberPosition) + 1)
         }
       } else if (questionNumber === 2) {
         $("#predator-div").show();
@@ -188,7 +191,7 @@ $(document).ready(function () {
         console.log(i + $(".player" + i).attr("style"));
         
         // IF THE PLAYER GOT TO THE CABIN
-        if ($(".player" + i).attr("style") === "left: 80vw;") {
+        if ($(".player" + i).attr("data-position") === "9") {
           // On the board screen...
           if (localStorage.getItem("boardScreen")) {
             // Write name of player
@@ -198,7 +201,7 @@ $(document).ready(function () {
             $("#winners-modal").click();
             finish = true;
             setTimeout(() => {
-              database.ref().child(sessionCode).remove();
+              // database.ref().child(sessionCode).remove();
               window.location.href = "/dashboard";
             }, 5000);
           // On the controller screen...
@@ -207,7 +210,7 @@ $(document).ready(function () {
             audio.play();
           }
         // IF THE PLAYER GETS EATEN
-        } else if ($(".player" + i).attr("style") === $(".predator").attr("style") && questionNumber > 1) {
+        } else if ($(".player" + i).attr("data-position") === $(".predator").attr("data-position") && questionNumber > 1) {
 
           if (localStorage.getItem("boardScreen")) {
             $(".player" + i).hide();
@@ -254,7 +257,7 @@ $(document).ready(function () {
     $("#game-over").click();
     setTimeout(() => {
       window.location.href = "/dashboard";
-      database.ref().child(sessionCode).remove();
+      // database.ref().child(sessionCode).remove();
     }, 5000);
   }
 
