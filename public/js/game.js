@@ -6,10 +6,6 @@ var answerNow = false;
 // This variable will be set to true when all players have answered
 var allPlayersAnswered = false;
 var finish = false;
-var audioCorrect = $("#answer-correct");
-var audioWrong = $("#answer-wrong");
-var audioWin = $("#game-win");
-var audioLose = $("#game-lose");
 
 $(document).ready(function () {
   // --------------------------------------------------------------
@@ -101,10 +97,10 @@ $(document).ready(function () {
         var choice = "p" + localStorage.getItem("playerNumber") + "Choice";
         if (localStorage.getItem("controller")) {
           if (currentGame[sessionCode][choice] === correctAnswer) {
-            audioCorrect.play();
+            $("#answer-correct").play();
             // console.log("Played sound: (correct)");
           } else {
-            audioWrong.play();
+            $("#answer-wrong").play();
             // console.log("Played sound: (incorrect)");
           }
         }
@@ -207,7 +203,7 @@ $(document).ready(function () {
             }, 5000);
           // On the controller screen...
           } else if (localStorage.getItem("controller")) {
-            audioWin.play();
+            $("#game-win").play();
           }
           // IF THE PLAYER GETS EATEN
         } else if ($(".player" + i).attr("data-position") === $(".predator").attr("data-position") && questionNumber > 1) {
@@ -221,7 +217,7 @@ $(document).ready(function () {
             }
             
           } else if (localStorage.getItem("controller")) {
-            audioLose.play();
+            $("#game-lose").play();
           }
         }
       }
