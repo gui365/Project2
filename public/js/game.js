@@ -14,6 +14,7 @@ $(document).ready(function () {
 
   // Use data in currentSession to render the predator and avatars on the game board
   $("#predator-img").attr("src", "/images/" + currentGame.predatorAvatar);
+  $("#predator-div").hide();
   $("#p1-img").attr("src", "/images/" + currentGame.p1Avatar);
   $("#p2-img").attr("src", "/images/" + currentGame.p2Avatar);
   $("#p3-img").attr("src", "/images/" + currentGame.p3Avatar);
@@ -167,7 +168,9 @@ $(document).ready(function () {
             left: "+=10vw"
           }, 1000);
         }
-      }
+      } else if (questionNumber === 2) {
+        $("#predator-div").show();
+      };
       
       setTimeout(() => {
         checkWinLose();
