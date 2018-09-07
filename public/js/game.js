@@ -6,10 +6,10 @@ var answerNow = false;
 // This variable will be set to true when all players have answered
 var allPlayersAnswered = false;
 var finish = false;
-var audioCorrect = new Audio("/sounds/answer_correct.mp3");
-var audioWrong = new Audio("/sounds/answer_wrong.mp3");
-var audioWin = new Audio("/sounds/game_win.mp3");
-var audioLose = new Audio("/sounds/game_lose.mp3");
+var audioCorrect = $("#answer-correct");
+var audioWrong = $("#answer-wrong");
+var audioWin = $("#game-win");
+var audioLose = $("#game-lose");
 
 $(document).ready(function () {
   // --------------------------------------------------------------
