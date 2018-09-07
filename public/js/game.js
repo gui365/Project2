@@ -5,6 +5,7 @@ var questionNumber = 0;
 var answerNow = false;
 // This variable will be set to true when all players have answered
 var allPlayersAnswered = false;
+var finish = false;
 
 $(document).ready(function () {
   // --------------------------------------------------------------
@@ -13,6 +14,7 @@ $(document).ready(function () {
 
   // Use data in currentSession to render the predator and avatars on the game board
   $("#predator-img").attr("src", "/images/" + currentGame.predatorAvatar);
+  $("#predator-div").hide();
   $("#p1-img").attr("src", "/images/" + currentGame.p1Avatar);
   $("#p2-img").attr("src", "/images/" + currentGame.p2Avatar);
   $("#p3-img").attr("src", "/images/" + currentGame.p3Avatar);
@@ -22,7 +24,6 @@ $(document).ready(function () {
   $("#p1-name").text(currentGame.p1Username);
   $("#p2-name").text(currentGame.p2Username);
   $("#p3-name").text(currentGame.p3Username);
-
   
   // Start a 5 seconds timer before displaying the first question
   // Activate the modal
@@ -94,15 +95,12 @@ $(document).ready(function () {
         
         // Controller will play sound
         var choice = "p" + localStorage.getItem("playerNumber") + "Choice";
-        if (!localStorage.getItem("boardScreen")) {
+        if (localStorage.getItem("controller")) {
           if (currentGame[sessionCode][choice] === correctAnswer) {
-            var audio = new Audio("/sounds/answer_correct.mp3");
-            audio.play();
+            document.getElementById("answer-correct").play();
             // console.log("Played sound: (correct)");
-            
           } else {
-            var audio = new Audio("/sounds/answer_wrong.mp3");
-            audio.play();
+            document.getElementById("answer-wrong").play();
             // console.log("Played sound: (incorrect)");
           }
         }
@@ -141,36 +139,43 @@ $(document).ready(function () {
     
     // Moving the avatars
     function animateAvatars() {
-      checkWinLose();
 
       for (let i = 1; i < 4; i++) {
         var playerChoice = "p" + i + "Choice";
         if (currentGame[sessionCode][playerChoice] === correctAnswer) {
           var playerAvatar = $(".player" + i);
 
-          // Record the numbe rof right answers under the data-correct attribute
-          var numberCorrect = $(".player" + i).attr("data-correct");
-          $(".player" + i).attr("data-correct", parseInt(numberCorrect) + 1)
+          // Record the position under the data-position attribute
+          var numberPosition = $(".player" + i).attr("data-position");
+          $(".player" + i).attr("data-position", parseInt(numberPosition) + 1)
 
           // Move it forward
           playerAvatar.animate({
             left: "+=10vw"
-          }, 1000);
-          console.log("p" + i + " correct");
+          }, 2000);
+          
+          // console.log("p" + i + " correct");
         }
       }
       
       
-      if (questionNumber > 1) {
+      if (questionNumber > 2) {
         var random = Math.floor(Math.random() * 5);
         if (random !== 1) {
           $(".predator").animate({
             left: "+=10vw"
           }, 1000);
+          var numberPosition = $(".predator").attr("data-position");
+          $(".predator").attr("data-position", parseInt(numberPosition) + 1)
         }
-      }
+      } else if (questionNumber === 2) {
+        $("#predator-div").show();
+      };
       
-      resetQuestion();
+      setTimeout(() => {
+        checkWinLose();
+        resetQuestion();
+      }, 2200);
     }
 
     // WORK ON THIS FUNCTION NEXT - 9/4/18 9:55 PM
@@ -179,22 +184,46 @@ $(document).ready(function () {
         var pPosition = $(".player" + i).attr("style");
         console.log(i + ": " + pPosition);
         
-        console.log($(".player" + i).css("left"));
+        // console.log($(".player" + i).css("left"));
+        console.log(i + $(".player" + i).attr("style"));
         
-        if ($(".player" + i).attr("style") === "left: 80vw;") {
+        // IF THE PLAYER GOT TO THE CABIN
+        if ($(".player" + i).attr("data-position") === "9") {
+          // On the board screen...
           if (localStorage.getItem("boardScreen")) {
-            $(".safe").append("<p>" + currentGame[sessionCode]["p" + i + "Username"] + "</p>");
-            $(".player" + i).remove();
+            // Write name of player
+            var avatarFile = currentGame[sessionCode]["p" + i + "Avatar"];
+            var userFile = currentGame[sessionCode]["p" + i + "Username"];
+            $("#winners").append(`<div style="d-flex flex-wrap flex-column align-items-center justify-content-center"><img src="./images/${avatarFile}"><p>${userFile}</p></div>`)
+            $("#winners-modal").click();
+            finish = true;
+            setTimeout(() => {
+              // database.ref().child(sessionCode).remove();
+              window.location.href = "/dashboard";
+            }, 5000);
+          // On the controller screen...
+          } else if (localStorage.getItem("controller")) {
+            document.getElementById("game-win").play();
+          }
+          // IF THE PLAYER GETS EATEN
+        } else if ($(".player" + i).attr("data-position") === $(".predator").attr("data-position") && questionNumber > 1) {
+          
+          if (localStorage.getItem("boardScreen")) {
+            $(".player" + i).hide();
+            $(".player" + i).css("left", "-100vw;");
+            
+            if ($(".player1").is(":hidden") && $(".player2").is(":hidden") && $(".player3").is(":hidden")) {
+              endGame();
+            }
+            
+          } else if (localStorage.getItem("controller")) {
+            document.getElementById("game-lose").play();
           }
         }
-
-        // if ($(".player" + i).attr("style") === $(".predator").attr("style")) {
-        //   if (localStorage.getItem("boardScreen")) {
-        //     $(".prey").append("<p>" + currentGame[sessionCode]["p" + i + "Username"] + "</p>");
-        //     $(".player" + i).remove();
-        //   }
-        // }
       }
+      console.log("Predator: " + $(".predator").attr("style"));
+      
+
     }
 
     function resetQuestion() {
@@ -205,35 +234,28 @@ $(document).ready(function () {
       allPlayersAnswered = false;
       answerNow = false;
       
-      generateQuestion();
+      // Stop the game after 13 questions if nobody won
+      if (questionNumber === 13) {
+        endGame();
+      }
+
+      if (finish) {
+        return;
+      } else {
+        generateQuestion();
+      }
+      // }
     }
   };
+
+  function endGame() {
+    $("#game-over").click();
+    setTimeout(() => {
+      window.location.href = "/dashboard";
+      // database.ref().child(sessionCode).remove();
+    }, 5000);
+  }
 
   generateQuestion();
 
 });
-
-
-// compare chosen answer with object's correct answer property
-// if chosen answer matches correct answer then increase user object position property by one - make the player move one spot (front-end)
-//Note: this needs to be saved in MYSQL - Need to add a position property to the user model object
-// else keep the user object position the same (don't do anything)
-// for the bear - move position after 2 questions
-//NOTE: Need a bear object - put this in game.js to start, can move later.
-// Compare user object position property to the bear object's:
-// if they are equal, the user is eaten, some sort of visualization pops up telling them they are dead
-// Compare the user's position to the cabin's position
-// If user's position === position 11 (cabin), then that player sees some sort of visualization telling them that they won and are safe
-//go through this for 13 rounds/questions
-// Once all of the questions/rounds are done
-// Show on dashboard who won, who died and say that the game is over
-// Update user object with win++ or death++ -----> maybe a future implementation
-// If they all died - some sort of visualization of the bear turning into an alien - Anh
-// Display the above with a timer before ending the connection and showing the home screen again
-
-//who signed in from firebase (need the user object info)
-//need to toggle the dashboard div to show the question and then the players/correct answers
-
-// answer A on the screen equals 1st answer from the question array (randomize the answers)
-//display the player stats/correct answers after the setTimeout completes (15 sec)
-// Note: need to add timer div probably

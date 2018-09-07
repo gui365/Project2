@@ -101,13 +101,13 @@ main p {
   left: 90vw;
 }
 
-.predator {
-  left: 0;
+/* .predator {
+  left: 10vw;
 }
 
 .players {
   left: 10vw;
-}
+} */
 
 .player1 {
   top: -20vh;
@@ -133,4 +133,13 @@ main p {
 .correct {
   background-color: rgba(0, 128, 0, 0.8);
   border-radius: 20px;
+}
+
+#game-over {
+  font-size: 20vw;
+  text-shadow: 2px 2px 20px rgb(61, 61, 61);
+  text-align: center;
+  color: red;
+  font-family: "YouMurderer", Arial, Helvetica, sans-serif;
+  font-weight: 400;
 }

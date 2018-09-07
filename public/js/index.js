@@ -1,7 +1,6 @@
-//hide these keys in .dotenv file
-// Initialize Firebase
 var config = {
   apiKey: "AIzaSyAVctAeThQ7WFsUui0Zdmf_2Mrr-8CoiNg",
+  // apiKey: process.env.FIREBASE_API_KEY,
   authDomain: "chooseyourpredator.firebaseapp.com",
   databaseURL: "https://chooseyourpredator.firebaseio.com",
   projectId: "chooseyourpredator",
@@ -80,9 +79,11 @@ function renderBoard() {
 $(document).ready(function(){
   $(".create-button").click(function(){
     event.preventDefault();
+    localStorage.clear();
     // Run the function to generate a code
     sessionCode = generateCode();
-
+    
+    localStorage.setItem("sessionCode", sessionCode);
     // Display the code to the screen and set the game structure in Firebase for that session
     $(".session-code").text(sessionCode);
     database.ref("/" + sessionCode).set(gameStructure);
@@ -134,6 +135,7 @@ $(document).ready(function(){
       database.ref().child(sessionEnter + "/players").push(userName);
       playerNumber = Object.keys(currentGame[sessionEnter].players).length;
       localStorage.setItem("playerNumber", playerNumber);
+      localStorage.setItem("controller", true);
       // Push the username to Firebase
       database.ref().child(localStorage.getItem("sessionCode")).update({
         ["p" + playerNumber + "Username"]: userName

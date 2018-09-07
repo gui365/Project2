@@ -1,4 +1,5 @@
 # Project2
+
 # **Choose Your Predator**
 
 This project was developed as part of the Penn Coding Boot Camp.
@@ -73,3 +74,5 @@ Run *npm start* or *node server.js* to launch the game on your localhost port
 **Anh Lucci** - *Author*
 **Lexi Cummins** - *Author*
 **Michaela White** - *Author*
+
+

@@ -1,6 +1,5 @@
 var mysql = require("mysql");
 var questions = [];
-
 var connection;
 
 if (process.env.JAWSDB_URL) {
@@ -9,8 +8,8 @@ if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
-    user: "root",
-    password: "root",
+    user: process.env.MYSQL_USER,
+    password: process.env.MYSQL_PASSWRD,
     database: "trivia_db"
   });
 } 
