@@ -16,6 +16,7 @@ MYSQL_USER=your-local-username-here
 
 # For All Users Running App Locally
 Change the port number for MYSQL in questions.js
+Create trivia_db in MySQL, import questions.csv to that database
 
 # For Mac Users Running App Locally
 
