@@ -189,6 +189,10 @@ $(document).ready(function(){
     // SET answerNow to true when the question appears in board. Set it to false when time runs out or all pChoice(s) have been recorded
     if (answerNow) {
       var answer = $(this).attr("data-option");
+      $(this).toggleClass("highlight");
+      setTimeout(() => {
+        $(this).toggleClass("highlight");
+      }, 2000);
       localStorage.setItem("answer", answer);
       database.ref().child(localStorage.getItem("sessionCode")).update({
         [keyToUpdate]: answer
