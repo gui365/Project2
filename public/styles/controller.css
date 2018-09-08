@@ -90,3 +90,8 @@ section {
 .not-active {
   opacity: 0.2;
 }
+
+.highlight {
+  background-color: rebeccapurple;
+  color: white;
+}
