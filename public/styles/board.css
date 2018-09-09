@@ -59,7 +59,7 @@ main {
 }
 
 main img {
-  width: 7vw;
+  width: 10vw;
 }
 
 header {
@@ -93,8 +93,9 @@ h2 {
 }
 
 main p {
-  font-size: 100%;
+  font-size: 110%;
   line-height: 1.2;
+  font-weight: 700;
 }
 
 .cabin {

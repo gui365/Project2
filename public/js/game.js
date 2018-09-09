@@ -201,23 +201,23 @@ $(document).ready(function () {
               // database.ref().child(sessionCode).remove();
               window.location.href = "/dashboard";
             }, 5000);
-          // On the controller screen...
-          } else if (localStorage.getItem("controller")) {
             document.getElementById("game-win").play();
+          // On the controller screen...
+          // } else if (localStorage.getItem("controller")) {
           }
           // IF THE PLAYER GETS EATEN
         } else if ($(".player" + i).attr("data-position") === $(".predator").attr("data-position") && questionNumber > 1) {
           
           if (localStorage.getItem("boardScreen")) {
             $(".player" + i).hide();
-            $(".player" + i).css("left", "-100vw;");
+            $(".player" + i).attr("data-position", parseInt(numberPosition) - 13)
             
             if ($(".player1").is(":hidden") && $(".player2").is(":hidden") && $(".player3").is(":hidden")) {
               endGame();
             }
             
-          } else if (localStorage.getItem("controller")) {
             document.getElementById("game-lose").play();
+          // } else if (localStorage.getItem("controller")) {
           }
         }
       }
